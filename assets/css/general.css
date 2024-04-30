@@ -1,0 +1,16 @@
+html, body, #__nuxt, #__layout{
+    height:100%!important;
+    width: 100%!important;
+    margin: 0;
+    padding: 0;
+}
+
+#__nuxt
+{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+}
+
