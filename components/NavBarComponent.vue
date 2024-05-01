@@ -5,7 +5,8 @@
 
 <body>
 
-<ul>    <slot></slot>
+<ul>    
+  <slot></slot>
 </ul>
 
 </body>

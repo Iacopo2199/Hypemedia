@@ -9,13 +9,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
   <header>
+    <NuxtLink to="/">
     <h1><img src="~/assets/img/logo.png" width="60%"></h1>
+  </NuxtLink>
     <nav>
-      <NuxtLink to="/">HOME</NuxtLink>
       <NuxtLink to="/projects">ALL PROJECTS</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
       <NuxtLink to="/services">ALL SERVICES</NuxtLink>
       <NuxtLink to="/activities">ALL ACTIVITIES</NuxtLink>
+      <NuxtLink to="/contact_us">CONTACT US</NuxtLink>
     </nav>
   </header>
 
