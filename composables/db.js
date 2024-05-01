@@ -14,6 +14,37 @@ const db = new Sequelize({
 
 await db.authenticate()
 
+const Center = db.define('center', {
+    center_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+    },
+    mission: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    history: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    opening_hours: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    practical_info: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+},{
+    createdAt: false,
+    updatedAt: false,
+    tableName: 'center',
+})
 
 const People = db.define('people',{
     name: {
@@ -51,7 +82,7 @@ const Cv = db.define('cv',{
 },{
     createdAt: false,
     updatedAt: false,
-
+    tableName: 'cv'
 })
 
 
@@ -96,8 +127,24 @@ if(await Cv.count()===0)
         },
     ])
     
+await Center.sync() 
+if(await Center.count()===0)
+    await Center.bulkCreate([
+        {
+            center_name: 'Better Future',
+            mission: 'AAAAAAAAAAAAAAAAAAA',
+            history: 'BBBBBBBBBBBBBBBBB',
+            location: 'CCCCCCCCCCCCCCCC',
+            opening_hours: 'DDDDDDDDDDDDD',
+            practical_info: 'FFFFFFFFFFFFFF',
+        }
+    ])
            
 
 export function usePeopleDb(){
     return People
+}
+
+export function useCenterDb(){
+    return Center
 }

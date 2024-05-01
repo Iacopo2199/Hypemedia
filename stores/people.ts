@@ -1,5 +1,8 @@
 import {useFetch} from "#app";
-import { defineStore } from 'pinia'
+import { defineStore, createPinia, setActivePinia } from "pinia";
+
+const pinia = createPinia();
+setActivePinia(pinia);
 
 interface People {
     name:string,

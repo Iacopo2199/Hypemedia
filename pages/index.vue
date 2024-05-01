@@ -1,18 +1,25 @@
 <script setup lang="ts">
+import { useCenterStore } from '~/stores/center';
+import CenterComponent from './components/CenterComponent.vue';
+
+const store = useCenterStore()
+const center = store.center
+
 </script>
 
+  
 <template>
-    <h2>
-      HOME page
-    </h2>
+
+<CenterComponent v-for="c of center"
+                   :center_name="c.center_name">
+</CenterComponent>
+    
+
+
 </template>
 
 <style scoped>
-#main-img {
-  width: 80%;
-  max-width: 1000px;
-  height: auto;
-}
+
 
 main {
   width: 100%;
@@ -20,4 +27,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+
+
 </style>
