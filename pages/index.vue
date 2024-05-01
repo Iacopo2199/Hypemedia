@@ -11,13 +11,7 @@ const center = store.center
 <template>
 <link rel="stylesheet" href="~/assets/css/general.css"></link>
 
-<NavBarComponent>
-  <li><a href="">Home</a></li>
-  <li><a href="">News</a></li>
-  <li><a href="">Contact</a></li>
-  <li><a href="">About</a></li>
-</NavBarComponent>
-<br><br>
+
 <CenterComponent v-for="c of center"
                    :center_name="c.center_name"
                    :history="c.history"

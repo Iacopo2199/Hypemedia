@@ -5,8 +5,7 @@
 
 <body>
 
-<ul>
-    <slot></slot>
+<ul>    <slot></slot>
 </ul>
 
 </body>
@@ -18,25 +17,11 @@
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  font-size: 30px;
 }
 
-li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: green;
-  }
 </style>
