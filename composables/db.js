@@ -132,11 +132,11 @@ if(await Center.count()===0)
     await Center.bulkCreate([
         {
             center_name: 'Better Future',
-            mission: 'AAAAAAAAAAAAAAAAAAA',
-            history: 'BBBBBBBBBBBBBBBBB',
-            location: 'CCCCCCCCCCCCCCCC',
-            opening_hours: 'DDDDDDDDDDDDD',
-            practical_info: 'FFFFFFFFFFFFFF',
+            mission: 'Prevention of domestic violence through the protection end empowerment of the victim, rehabilitation of family members; challenge systems and institutions so that they respond more effectively to the needs of battered women and their children; promote social change; and educate the community on gender equality and domestic violence and its consequences.',
+            history: 'Established in 2010, Better Future is a full-service center led by a small group of feminist activists and community leaders dedicated to the mission of combating domestic abuse through the protection, rehabilitation, and empowerment of survivors and changing the legal, educational, and social conditions that contribute to a culture of silence surrounding DV. We uphold a zero tolerance policy for violence against women and seek to create an environment where women and girls are protected, defended, and nurtured.',
+            location: 'Casa di Accoglienza delle Donne Maltrattate Odv, Via Piacenza 14, Milan',
+            opening_hours: 'Monday - Friday: 8.30-18, Saturday: 10-18',
+            practical_info: 'Operators will be active in the opening hours of the center listed above, in the other hours the online voice mail will be active to take care of your requests.',
         }
     ])
            

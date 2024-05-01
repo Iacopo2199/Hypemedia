@@ -19,6 +19,8 @@
     </nav>
   </header>
 
+
+
   <main>
     <slot/>
   </main>
@@ -65,4 +67,5 @@ nav a {
   font-size: 17pt;
   font-weight: bold;
 }
+
 </style>
