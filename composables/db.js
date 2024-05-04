@@ -46,6 +46,62 @@ const Center = db.define('center', {
     tableName: 'center',
 })
 
+const Project = db.define('project', {
+    project_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+    },
+    personName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    short_description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    picture: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+},{
+    createdAt: false,
+    updatedAt: false,
+    tableName: 'project',
+})
+
+const Details = db.define('details', {
+    project_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+    },
+    target_people: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    duration: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    partners: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+},{
+    createdAt: false,
+    updatedAt: false,
+    tableName: 'details',
+})
+
 const People = db.define('people',{
     name: {
         type: DataTypes.STRING,
@@ -141,10 +197,72 @@ if(await Center.count()===0)
     ])
            
 
+await Project.sync() 
+if(await Project.count()===0)
+    await Project.bulkCreate([
+        {
+            project_name: 'Project 1',
+            personName: 'Iacopo Ferrario',
+            short_description: 'aaaa',
+            description: 'aaaaaaaaaaaa',
+            picture: 'bb',
+        },
+        {
+            project_name: 'Project 2',
+            personName: 'Matteo Huang',
+            short_description: 'aaa',
+            description: 'aaaaa',
+            picture: 'bbb',
+        },
+        {
+            project_name: 'Project 3',
+            personName: 'Anastasia Favero',
+            short_description: 'aaaa',
+            description: 'aaaaa',
+            picture: 'cccc',
+        },
+    ])
+           
+
+await Details.sync() 
+if(await Details.count()===0)
+    await Details.bulkCreate([
+        {
+            project_name: 'Project 1',
+            target_people: 'aba',
+            location: 'bb',
+            duration: 'bb',
+            partners: 'aaa'
+        },
+        {
+            project_name: 'Project 2',
+            target_people: 'aaaa',
+            location: 'aaaaaabbbaaaaaa',
+            duration: 'bb',
+            partners: 'aaa'
+        },{
+            project_name: 'Project 3',
+            target_people: 'aaaa',
+            location: 'aaaaabbbbaaaaaaa',
+            duration: 'bb',
+            partners: 'aaa'
+        },
+    ])
+           
+ 
+    
 export function usePeopleDb(){
     return People
 }
 
 export function useCenterDb(){
     return Center
+}
+
+export function useProjectDb(){
+    return Project
+}
+
+export function useDetailsDb(){
+    return Details
 }

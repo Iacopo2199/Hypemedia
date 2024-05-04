@@ -13,6 +13,7 @@
     <h1><img src="~/assets/img/logo.png" width="60%"></h1>
   </NuxtLink>
     <nav>
+      <NuxtLink to="/about_us">ABOUT US</NuxtLink>
       <NuxtLink to="/projects">ALL PROJECTS</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
       <NuxtLink to="/services">ALL SERVICES</NuxtLink>
@@ -62,11 +63,11 @@ header
 
 nav {
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 
 nav a {
-  font-size: 17pt;
+  font-size: 15pt;
   font-weight: bold;
 }
 
