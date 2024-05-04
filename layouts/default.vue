@@ -13,6 +13,7 @@
     <h1><img src="~/assets/img/logo.png" width="60%"></h1>
   </NuxtLink>
     <nav>
+      <button class="btn" onclick="history.back()">BACK</button>
       <NuxtLink to="/about_us">ABOUT US</NuxtLink>
       <NuxtLink to="/projects">ALL PROJECTS</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
@@ -67,8 +68,35 @@ nav {
 }
 
 nav a {
-  font-size: 15pt;
+  font-size: 17pt;
   font-weight: bold;
+}
+
+.btn {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #330101);
+  background-image: -moz-linear-gradient(top, #d93434, #330101);
+  background-image: -ms-linear-gradient(top, #d93434, #330101);
+  background-image: -o-linear-gradient(top, #d93434, #330101);
+  background-image: linear-gradient(to bottom, #d93434, #330101);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ff0000;
+  background-image: -webkit-linear-gradient(top, #ff0000, #ff007b);
+  background-image: -moz-linear-gradient(top, #ff0000, #ff007b);
+  background-image: -ms-linear-gradient(top, #ff0000, #ff007b);
+  background-image: -o-linear-gradient(top, #ff0000, #ff007b);
+  background-image: linear-gradient(to bottom, #ff0000, #ff007b);
+  text-decoration: none;
 }
 
 </style>

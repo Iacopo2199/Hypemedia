@@ -8,7 +8,6 @@ const center = store.center
 </script>
 
 <template>
-<link rel="stylesheet" href="~/assets/css/general.css"></link>
 
 
 <CenterComponent v-for="c of center"
