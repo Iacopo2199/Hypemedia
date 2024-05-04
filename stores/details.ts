@@ -17,12 +17,12 @@ export const useDetailsStore = defineStore('details',()=>{
     const details = reactive([] as Details[])
     
     async function init(m: any) {
-        const {data} = await useFetch<any[]>('/api/details',
+        const data = await $fetch<any[]>('/api/details',
             {
                 query: {project_name: m}
             }
         )
-        const list = data.value
+        const list = data
         if(list!=null) {
             details.splice(0,details.length)  //Clear the list
             details.push(...list)
