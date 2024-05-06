@@ -108,10 +108,6 @@ const People = db.define('people',{
         allowNull: false,
         primaryKey: true
     },
-    picture: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
     activity: {
         type: DataTypes.STRING,
         allowNull: false
@@ -146,19 +142,16 @@ await People.sync()
 if(await People.count()===0)
     await People.bulkCreate([
         {
-            name: 'Iacopo Ferrario',
-            picture: 'aaa',
-            activity: 'Bestemmiatore',
+            name: 'Emma Rock',
+            activity: 'Business manager',
         },
         {
-            name: 'Matteo Huang',
-            picture: 'aaa',
-            activity: 'Gamer',
-        },
-        {
-            name: 'Anastasia Favero',
-            picture: 'aaa',
+            name: 'Jeff Blake',
             activity: 'Developer',
+        },
+        {
+            name: 'Sonia Kade',
+            activity: 'Human Resource manager',
         },
     ])
     
