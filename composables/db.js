@@ -112,6 +112,10 @@ const People = db.define('people',{
         type: DataTypes.STRING,
         allowNull: false
     },
+    picture: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
 },{
     createdAt: false,
     updatedAt: false,
@@ -144,14 +148,18 @@ if(await People.count()===0)
         {
             name: 'Emma Rock',
             activity: 'Business manager',
+            picture: '/_nuxt/assets/img/people/emma.png'
+
         },
         {
             name: 'Jeff Blake',
             activity: 'Developer',
+            picture: '/_nuxt/assets/img/people/jeff.png'
         },
         {
             name: 'Sonia Kade',
             activity: 'Human Resource manager',
+            picture: '/_nuxt/assets/img/people/sonia.png'
         },
     ])
     

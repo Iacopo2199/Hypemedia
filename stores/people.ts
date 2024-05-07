@@ -6,8 +6,8 @@ setActivePinia(pinia);
 
 interface People {
     name:string,
-    picture:string,
-    activity:string
+    activity:string,
+    picture:string
 }
 
 export const usePeopleStore = defineStore('people',()=>{
