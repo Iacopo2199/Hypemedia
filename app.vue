@@ -3,8 +3,8 @@ import BreadComponent from './components/BreadComponent.vue';
 
 </script>
 <template>
-  <BreadComponent></BreadComponent>
   <NuxtLayout>
+    <BreadComponent></BreadComponent>
     <NuxtPage></NuxtPage>
   </NuxtLayout>
 </template>

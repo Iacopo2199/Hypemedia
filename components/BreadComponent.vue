@@ -1,45 +1,110 @@
-<script lang="ts" setup>
-import { useRoute, useRouter } from 'vue-router';
-import type { RouteRecordNormalized } from 'vue-router';
-
-const route = useRoute();
-const router = useRouter();
-
-const getBreadcrumbs = () => {
-  const fullPath = route.path;
-  const requestPath = fullPath.startsWith("/")
-    ? fullPath.substring(1)
-    : fullPath;
-  const crumbs = requestPath.split("/");
-  const breadcrumbs: RouteRecordNormalized[] = [];
-  let path = "";
-  crumbs.forEach((crumb) => {
-    if (crumb) {
-      path = `${path}/${crumb}`;
-      const breadcrumb = router.getRoutes().find((r) => r.path === path);
-      if (breadcrumb) {
-        breadcrumbs.push(breadcrumb);
-      }
-    }
-  });
-  return breadcrumbs;
+<script>
+export default {
+  computed: {
+    crumbs() {
+      const fullPath = this.$route.fullPath;
+      const params = fullPath.startsWith('/') ? fullPath.substring(1).split('/') : fullPath.split('/');
+      const crumbs = [];
+      let path = '/';
+      params.forEach(param => {
+        if (param !== '') {
+          path = `${path}${param}/`;
+          crumbs.push({ title: this.titleCase(param.replace(/-/g, ' ')), path });
+        }
+      });
+      return crumbs;
+    },
+  },
+  methods: {  //Method to create the title to be displayed
+    titleCase(str) {
+      str = str.replace("_", " ")
+      return str.toLowerCase().replace(/(?:^|\s|-)\w/g, function(match) {
+        return match.toUpperCase();
+      });
+    },
+  },
 };
-
-const ariaCurrent = (index: number) =>
-  index === getBreadcrumbs().length - 1 ? "page" : "false";
 </script>
 
 <template>
-  <nav id="breadcrumbs" aria-label="Breadcrumb">
-    <ul>
-      <li>
-        <NuxtLink to="/" :aria-current="ariaCurrent(-1)">Home</NuxtLink>
-      </li>
-      <li v-for="(breadcrumb, index) in getBreadcrumbs()" :key="index">
-        <NuxtLink :to="breadcrumb.path" :aria-current="ariaCurrent(index)">
-          {{ breadcrumb.name || breadcrumb.path }} <!-- Display name if available -->
-        </NuxtLink>
-      </li>
-    </ul>
-  </nav>
+  <ul class="crumb1">
+    <li v-for="(crumb, index) in crumbs" :key="index">
+      <NuxtLink :to="crumb.path">
+        <span>{{ crumb.title }}</span>
+      </NuxtLink>
+    </li>
+  </ul>
 </template>
+
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*
+{
+  font-family: poppins;
+  text-decoration: none;
+  user-select: none;
+}
+a
+{
+  color: #fff;
+}
+
+.crumb1 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: orange;
+  transform: skew(-20deg);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.crumb1 li:hover
+{
+  opacity: 1;
+}
+
+.crumb1 li a
+{
+  display: block;
+  transform: skew(20deg);
+}
+
+.crumb2 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: orange;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.crumb2 li:hover
+{
+  opacity: 1;
+}
+  
+.crumb3 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  border-radius: 7px;
+}
+
+.crumb3 li:active
+{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  background: #3e8e41;
+}
+
+.crumb3 li:hover
+{
+    background: #3e8e41;
+}
+</style>
