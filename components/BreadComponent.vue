@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+import { useRoute, useRouter } from 'vue-router';
 import type { RouteRecordNormalized } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
+
 const getBreadcrumbs = () => {
   const fullPath = route.path;
   const requestPath = fullPath.startsWith("/")
@@ -13,7 +15,7 @@ const getBreadcrumbs = () => {
   let path = "";
   crumbs.forEach((crumb) => {
     if (crumb) {
-      path = `${path}/${crumb}`;  //recompile the URL bit by bit
+      path = `${path}/${crumb}`;
       const breadcrumb = router.getRoutes().find((r) => r.path === path);
       if (breadcrumb) {
         breadcrumbs.push(breadcrumb);
@@ -22,9 +24,9 @@ const getBreadcrumbs = () => {
   });
   return breadcrumbs;
 };
+
 const ariaCurrent = (index: number) =>
   index === getBreadcrumbs().length - 1 ? "page" : "false";
-
 </script>
 
 <template>
@@ -35,7 +37,7 @@ const ariaCurrent = (index: number) =>
       </li>
       <li v-for="(breadcrumb, index) in getBreadcrumbs()" :key="index">
         <NuxtLink :to="breadcrumb.path" :aria-current="ariaCurrent(index)">
-          {{ breadcrumb.name }}
+          {{ breadcrumb.name || breadcrumb.path }} <!-- Display name if available -->
         </NuxtLink>
       </li>
     </ul>

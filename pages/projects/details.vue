@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useDetailsStore } from '~/stores/details';
-
 const store = useDetailsStore()
 const details = store.details
 </script>
+
 
 <template>
     <div>
