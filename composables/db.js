@@ -161,6 +161,91 @@ if(await People.count()===0)
             activity: 'Human Resource manager',
             picture: '/_nuxt/assets/img/people/sonia.png'
         },
+        {
+            name: 'Sophia Bennett',
+            activity: 'Counselor',
+            picture: '/_nuxt/assets/img/people/sophia.png'
+        },
+        {
+            name: 'Liam Harper',
+            activity: 'Financial Advisor',
+            picture: '/_nuxt/assets/img/people/liam.png'
+        },
+        {
+            name: 'Ava Reed',
+            activity: 'Program Coordinator',
+            picture: '/_nuxt/assets/img/people/ava.png'
+        },
+        {
+            name: 'Mason Hayes',
+            activity: 'Website Specialist',
+            picture: '/_nuxt/assets/img/people/mason.png'
+        },
+        {
+            name: 'Olivia Carter',
+            activity: 'Legal Advisor',
+            picture: '/_nuxt/assets/img/people/olivia.png'
+        },
+        {
+            name: 'Noelle Brooks',
+            activity: 'Community Liaison',
+            picture: '/_nuxt/assets/img/people/noelle.png'
+        },
+        {
+            name: 'Isabella Morgan',
+            activity: 'Business Manager',
+            picture: '/_nuxt/assets/img/people/isabella.png'
+        },
+        {
+            name: 'Lucas Foster',
+            activity: 'Website Specialist',
+            picture: '/_nuxt/assets/img/people/lucas.png'
+        },
+        {
+            name: 'Mia Coleman',
+            activity: 'Crisis Intervention Specialist',
+            picture: '/_nuxt/assets/img/people/mia.png'
+        },
+        {
+            name: 'Lily Perry',
+            activity: 'Public Relations Manager',
+            picture: '/_nuxt/assets/img/people/lily.png'
+        },
+        {
+            name: 'Charlotte Lee',
+            activity: 'Volunteer Coordinator',
+            picture: '/_nuxt/assets/img/people/charlotte.png'
+        },
+        {
+            name: 'James Bennett',
+            activity: 'Case Manager',
+            picture: '/_nuxt/assets/img/people/james.png'
+        },
+        {
+            name: 'Amelia Phillips',
+            activity: 'Healthcare Advisor',
+            picture: '/_nuxt/assets/img/people/amelia.png'
+        },
+        {
+            name: 'Emily Wang',
+            activity: 'Job Training Specialist',
+            picture: '/_nuxt/assets/img/people/emily.png'
+        },
+        {
+            name: 'Evelyn Mitchell',
+            activity: 'Website Specialist',
+            picture: '/_nuxt/assets/img/people/evelyn.png'
+        },
+        {
+            name: 'Elijah Anderson',
+            activity: 'Fundraising Coordinator',
+            picture: '/_nuxt/assets/img/people/elijah.png'
+        },
+        {
+            name: 'Steven Hu',
+            activity: 'Policy Advocate',
+            picture: '/_nuxt/assets/img/people/steven.png'
+        }
     ])
     
   
