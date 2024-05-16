@@ -18,6 +18,7 @@ export default {
   methods: {  //Method to create the title to be displayed
     titleCase(str) {
       str = str.replace("_", " ")
+      str = str.replace("#", " >> ")
       return str.toLowerCase().replace(/(?:^|\s|-)\w/g, function(match) {
         return match.toUpperCase();
       });
