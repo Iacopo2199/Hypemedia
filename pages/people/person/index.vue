@@ -11,21 +11,26 @@ const cv = useCvStore()
 
 <template>
     
-    <ul>
       <li v-for="p in person">
-      {{ p.name }} , {{ p.activity }} <img :src="p.picture">
-      <br>
+      <h1>{{ p.name }}</h1>
+      <h2>{{ p.activity }} </h2>
+      <img :src="p.picture">
+      <br><br>
       <button @click="cv.get_cv(p.name)" class="button-73"><NuxtLink to="/people/person/CV">See CV</NuxtLink></button>
       </li>
-    </ul>
-  
+
 </template>
 
 <style scoped>
 
+li{
+  text-align: center;
+  list-style-type: none;
+}
+
 img {
 width: auto;
-height: 150px;
+height: 300px;
 }
 
 .button-73 {

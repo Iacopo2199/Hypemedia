@@ -116,6 +116,14 @@ const People = db.define('people',{
         type: DataTypes.STRING,
         allowNull: false
     },
+    project_name: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    service_name: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
 },{
     createdAt: false,
     updatedAt: false,
@@ -152,8 +160,8 @@ if(await People.count()===0)
         {
             name: 'Emma Rock',
             activity: 'Business manager',
-            picture: '/_nuxt/assets/img/people/emma.png'
-
+            picture: '/_nuxt/assets/img/people/emma.png',
+            project_name: 'Project 1',
         },
         {
             name: 'Jeff Blake',
@@ -283,7 +291,7 @@ if(await Project.count()===0)
     await Project.bulkCreate([
         {
             project_name: 'Project 1',
-            personName: 'Iacopo Ferrario',
+            personName: 'Emma Rock',
             short_description: 'aaaa',
             description: 'aaaaaaaaaaaa',
             picture: 'bb',

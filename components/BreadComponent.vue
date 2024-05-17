@@ -35,6 +35,7 @@ export default {
       </NuxtLink>
     </li>
   </ul>
+
 </template>
 
 
@@ -51,6 +52,7 @@ a
 {
   color: #fff;
 }
+
 
 .crumb1 li
 {
