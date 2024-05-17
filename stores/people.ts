@@ -12,6 +12,7 @@ interface People {
 
 export const usePeopleStore = defineStore('people',()=>{
     const people = reactive([] as People[])
+    const pers = reactive([] as People[])
     
     async function init() {
         const {data} = await useFetch<any[]>('/api/people')
@@ -22,8 +23,21 @@ export const usePeopleStore = defineStore('people',()=>{
         }
     }
 
+    async function get_person(person: any) {
+        const data = await $fetch<any[]>('/api/person',
+            {
+                query: {name: person}
+            }
+        )
+        const list = data
+        if(list!=null) {
+            pers.splice(0,pers.length)  //Clear the list
+            pers.push(...list)
+        }
+    }
+
     init()
 
-    return {people}
+    return {people, pers , get_person}
 })
 

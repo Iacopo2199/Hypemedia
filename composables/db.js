@@ -128,12 +128,16 @@ const Cv = db.define('cv',{
         allowNull: false,
         primaryKey: true
     },
-    education: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     personName: {
         type: DataTypes.STRING
+    },
+    cv_image: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    cv_link: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },{
     createdAt: false,
@@ -254,19 +258,10 @@ if(await Cv.count()===0)
     await Cv.bulkCreate([
         {
             cv_code: 1,
-            education: 'Ing',
-            personName: 'Iacopo Ferrario'
-        },
-        {
-            cv_code: 2,
-            education: 'Ing',
-            personName: 'Matteo Huang'
-        },
-        {
-            cv_code: 3,
-            education: 'Ing',
-            personName: 'Anastasia Favero'
-        },
+            personName: 'Emma Rock',
+            cv_image: '/_nuxt/assets/cv/emma/emma_cv.png',
+            cv_link: '/_nuxt/assets/cv/emma/emmaCv.pdf'
+        }
     ])
     
 await Center.sync() 
@@ -351,4 +346,8 @@ export function useProjectDb(){
 
 export function useDetailsDb(){
     return Details
+}
+
+export function useCvDb(){
+    return Cv
 }
