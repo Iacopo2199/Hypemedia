@@ -1,5 +1,20 @@
+<script setup lang="ts">
+</script>
+
+
 <template>
-    <div>
-      <h1>All activities page</h1>
-    </div>
+  <div id="app">
+    <Tabs />
+  </div>
 </template>
+
+<script>
+  import Tabs from '../components/Tabs.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      Tabs
+    }
+  }
+</script>

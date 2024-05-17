@@ -2,7 +2,7 @@
 import { useDetailsStore } from '~/stores/details';
 import { useProjectStore } from '~/stores/project';
 
-
+const name = 'Projects'
 const details = useDetailsStore()
 const store = useProjectStore()
 const project = store.project
