@@ -55,7 +55,7 @@ a
 .crumb1 li
 {
   display: inline-block;
-  padding: 15px;
+  padding: 30px;
   background: orange;
   transform: skew(-20deg);
   cursor: pointer;
