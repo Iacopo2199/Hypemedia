@@ -82,7 +82,7 @@ nav a {
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }

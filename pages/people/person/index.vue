@@ -30,7 +30,7 @@ const cv = useCvStore()
       <div class="container">
         <ul class="list">
       <button @click="store_proj.get_project_person(p.name)">Click here to see related projects</button>
-      <p id="par1" v-if="!proj.length">No projects are managed by {{ p.name }}</p>
+      <p id="par1" v-if="!proj.length" hidden>No projects are managed by {{ p.name }}</p>
       <p v-else v-for="pr in proj" ><button @click="store_proj.get_project(pr.project_name)" class="button-73"><NuxtLink to="/activities/project">{{ pr.project_name }}</NuxtLink></button>
       </p>
         </ul>
@@ -38,7 +38,7 @@ const cv = useCvStore()
       
       <ul class="list">
       <button @click="store_serv.get_service_person(p.name)">Click here to see related services</button>
-      <p id="par2" v-if="!serv.length">No services are managed by {{ p.name }}</p>
+      <p id="par2" v-if="!serv.length" hidden>No services are managed by {{ p.name }}</p>
       <p v-else v-for="sr in serv" ><button @click="store_serv.get_service(sr.service_name)" class="button-73"><NuxtLink to="/activities/service">{{ sr.service_name }}</NuxtLink></button>
       </p>
       </ul>

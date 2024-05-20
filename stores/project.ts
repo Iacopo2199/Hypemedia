@@ -57,14 +57,16 @@ export const useProjectStore = defineStore('project',()=>{
             proj_person.push(...list)
         }
 
-        /*
+        
+        if(!proj_person.length){
         let element = document.getElementById("par1")
         if (element) {
             // Set the `hidden` property to `true`
             (element as HTMLElement).hidden = false;
         } else {
             console.error('Element not found');
-        }*/
+        }
+        }
     }
 
     init()

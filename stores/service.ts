@@ -60,14 +60,16 @@ export const useServiceStore = defineStore('service',()=>{
             serv_person.push(...list)
         }
 
-        /*
-        let element = document.getElementById("par2")
-        if (element) {
-            // Set the `hidden` property to `true`
-            (element as HTMLElement).hidden = false;
-        } else {
-            console.error('Element not found');
-        }*/
+        
+        if(!serv_person.length){
+            let element = document.getElementById("par2")
+            if (element) {
+                // Set the `hidden` property to `true`
+                (element as HTMLElement).hidden = false;
+            } else {
+                console.error('Element not found');
+            }
+            }
     }
 
     

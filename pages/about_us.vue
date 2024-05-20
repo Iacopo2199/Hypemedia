@@ -41,6 +41,14 @@ const center = store.center
 </template>
 
 <style scoped>
+
+div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 20px;
+}
+
 .center {
       display: block;
       margin-left: auto;
@@ -52,12 +60,6 @@ const center = store.center
 
 h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
     font-size: 50px;              
-}
-div{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    font-size: 20px;
 }
 
 li {
