@@ -1,6 +1,9 @@
 <script setup>
 import { useProjectStore } from '~/stores/project';
 import { useDetailsStore } from '~/stores/details';
+import { usePeopleStore } from '~/stores/people';
+
+const store_people = usePeopleStore()
 
 const details = useDetailsStore()
 const store = useProjectStore()
@@ -20,7 +23,11 @@ const project = store.proj
 
       <b><h1 class="w3-container w3-center w3-padding-32">{{ p.picture }}</h1></b>
 
-      <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: {{ p.personName }}</h1></b>
+      <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: <NuxtLink to="/people/person">
+        <button @click="store_people.get_person(p.personName)" class="button-73">
+          {{ p.personName }}
+        </button>
+      </NuxtLink></h1></b>
 
       <b><h1 id="description" class="w3-container w3-center w3-padding-32">Description and info</h1></b>
     <div>{{ p.description }}</div>

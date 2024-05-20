@@ -74,6 +74,70 @@ const Project = db.define('project', {
     tableName: 'project',
 })
 
+const Service = db.define('service', {
+    service_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+    },
+    personName: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    short_description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    benefits: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    picture: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    testimonials: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+},{
+    createdAt: false,
+    updatedAt: false,
+    tableName: 'service',
+})
+
+const Practical_info = db.define('practical_info', {
+    service_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+    },
+    availability: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    logistical_information: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    duration: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+},{
+    createdAt: false,
+    updatedAt: false,
+    tableName: 'practical_info',
+})
+
 const Details = db.define('details', {
     project_name: {
         type: DataTypes.STRING,
@@ -271,6 +335,34 @@ if(await Cv.count()===0)
             cv_link: '/_nuxt/assets/cv/emma/emmaCv.pdf'
         }
     ])
+
+
+await Service.sync() 
+if(await Service.count()===0)
+    await Service.bulkCreate([
+        {
+            service_name: 'Service name1',
+            personName: 'Emma Rock',
+            short_description: 'short desc1',
+            description: 'description1',
+            benefits: 'benefits1',
+            picture: 'picture1',
+            testimonials: 'testimonials1'
+        }
+    ])
+    
+await Practical_info.sync() 
+if(await Practical_info.count()===0)
+    await Practical_info.bulkCreate([
+        {
+            service_name: 'Service name1',
+            availability: 'avail1',
+            logistical_information: 'log_info1',
+            duration: 'duration1',
+            location: 'location1',
+        }
+    ])
+     
     
 await Center.sync() 
 if(await Center.count()===0)
@@ -359,4 +451,12 @@ export function useDetailsDb(){
 
 export function useCvDb(){
     return Cv
+}
+
+export function useServiceDb(){
+    return Service
+}
+
+export function usePractical_infoDb(){
+    return Practical_info
 }
