@@ -292,23 +292,23 @@ if(await Project.count()===0)
         {
             project_name: 'Project 1',
             personName: 'Emma Rock',
-            short_description: 'aaaa',
-            description: 'aaaaaaaaaaaa',
-            picture: 'bb',
+            short_description: 'Help 50+',
+            description: 'Help older women',
+            picture: 'pic 1',
         },
         {
             project_name: 'Project 2',
             personName: 'Matteo Huang',
-            short_description: 'aaa',
-            description: 'aaaaa',
-            picture: 'bbb',
+            short_description: 'Help assaulted women',
+            description: 'Long help',
+            picture: 'pic 2',
         },
         {
             project_name: 'Project 3',
             personName: 'Anastasia Favero',
-            short_description: 'aaaa',
-            description: 'aaaaa',
-            picture: 'cccc',
+            short_description: 'Help women with family prob',
+            description: 'Long help',
+            picture: 'pic 3',
         },
     ])
            
@@ -318,23 +318,24 @@ if(await Details.count()===0)
     await Details.bulkCreate([
         {
             project_name: 'Project 1',
-            target_people: 'aba',
-            location: 'bb',
-            duration: 'bb',
-            partners: 'aaa'
+            target_people: 'Women 50+',
+            location: 'Italy',
+            duration: '12/01/2022 to 31/12/2025',
+            partners: 'Esselunga'
         },
         {
             project_name: 'Project 2',
-            target_people: 'aaaa',
-            location: 'aaaaaabbbaaaaaa',
-            duration: 'bb',
-            partners: 'aaa'
-        },{
+            target_people: 'Women',
+            location: 'Italy',
+            duration: '12/01/2022 to 31/12/2025',
+            partners: 'Microsoft'
+        },
+        {
             project_name: 'Project 3',
-            target_people: 'aaaa',
-            location: 'aaaaabbbbaaaaaaa',
-            duration: 'bb',
-            partners: 'aaa'
+            target_people: 'Women 18+',
+            location: 'USA',
+            duration: '12/01/2022 to 31/12/2025',
+            partners: 'Walmart'
         },
     ])
            

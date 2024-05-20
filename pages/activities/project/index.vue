@@ -16,17 +16,19 @@ const project = store.proj
 
 
     <span v-for="p in project">
-    <b><h1 class="w3-container w3-center w3-padding-32">{{ p.project_name }}</h1></b>
+      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.project_name }}</h1></b>
 
-    <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: {{ p.personName }}</h1></b>
+      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.picture }}</h1></b>
 
-    <b><h1 id="description" class="w3-container w3-center w3-padding-32">Description and info</h1></b>
+      <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: {{ p.personName }}</h1></b>
+
+      <b><h1 id="description" class="w3-container w3-center w3-padding-32">Description and info</h1></b>
     <div>{{ p.description }}</div>
     
     <br>
-    <div>
-    <button @click="details.init(p.project_name)" class="button-73"><NuxtLink to="/activities/project/details">Click here to see details</NuxtLink></button>
-    </div> 
+      <div>
+       <button @click="details.init(p.project_name)" class="button-73"><NuxtLink to="/activities/project/details">Click here to see details</NuxtLink></button>
+      </div>
     <br> 
   </span>
 
