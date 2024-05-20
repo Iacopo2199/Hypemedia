@@ -1,5 +1,7 @@
 import {useFetch} from "#app";
 import { defineStore, createPinia, setActivePinia } from "pinia";
+import { empty_serv } from "./service";
+import { empty_proj } from "./project";
 
 const pinia = createPinia();
 setActivePinia(pinia);
@@ -34,6 +36,9 @@ export const usePeopleStore = defineStore('people',()=>{
             pers.splice(0,pers.length)  //Clear the list
             pers.push(...list)
         }
+
+        empty_serv()
+        empty_proj()
     }
 
     init()

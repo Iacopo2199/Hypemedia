@@ -18,7 +18,7 @@
 
 <script>
 import Projects from '../pages/projects/index.vue';
-import Services from '../pages/services.vue';
+import Services from '../pages/services/index.vue';
 
 
 export default {

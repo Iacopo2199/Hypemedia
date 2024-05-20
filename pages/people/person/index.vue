@@ -1,12 +1,19 @@
 import type cvGet from "~/server/api/cv.get";
-
-<script setup lang="">
+<script setup>
 import { usePeopleStore } from '~/stores/people';
+import { useProjectStore } from "~/stores/project";
 import {useCvStore} from '~/stores/cv';
+import { useServiceStore } from "~/stores/service";
 
+
+const store_proj = useProjectStore()
+const store_serv = useServiceStore()
+const proj = store_proj.proj_person
+const serv = store_serv.serv_person
 const store = usePeopleStore()
 const person = store.pers
 const cv = useCvStore()
+
 </script>
 
 <template>
@@ -16,7 +23,34 @@ const cv = useCvStore()
       <h2>{{ p.activity }} </h2>
       <img :src="p.picture">
       <br><br>
+
+
+
+
+      <div class="container">
+        <ul class="list">
+      <button @click="store_proj.get_project_person(p.name)">Click here to see related projects</button>
+      <p id="par1" v-if="!proj.length">No projects are managed by {{ p.name }}</p>
+      <p v-else v-for="pr in proj" ><button @click="store_proj.get_project(pr.project_name)" class="button-73"><NuxtLink to="/activities/project">{{ pr.project_name }}</NuxtLink></button>
+      </p>
+        </ul>
+      <br>
+      
+      <ul class="list">
+      <button @click="store_serv.get_service_person(p.name)">Click here to see related services</button>
+      <p id="par2" v-if="!serv.length">No services are managed by {{ p.name }}</p>
+      <p v-else v-for="sr in serv" ><button @click="store_serv.get_service(sr.service_name)" class="button-73"><NuxtLink to="/activities/service">{{ sr.service_name }}</NuxtLink></button>
+      </p>
+      </ul>
+      </div>
+
+
+
+
+      <br>
+      <br>
       <button @click="cv.get_cv(p.name)" class="button-73"><NuxtLink to="/people/person/CV">See CV</NuxtLink></button>
+      <br><br>
       </li>
 
 </template>
@@ -31,6 +65,19 @@ li{
 img {
 width: auto;
 height: 300px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Optional: Adds space between the lists */
+    gap: 20px; /* Optional: Adds space between the lists */
+}
+
+.list {
+    list-style-type: none; /* Optional: Removes default list bullets */
+    padding: 0;
+    margin: 0;
+    width: 45%; /* Adjust width as needed */
 }
 
 .button-73 {
