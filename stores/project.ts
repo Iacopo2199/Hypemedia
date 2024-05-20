@@ -15,6 +15,7 @@ interface Project {
 
 export const useProjectStore = defineStore('project',()=>{
     const project = reactive([] as Project[])
+    const proj = reactive([] as Project[])
     
     async function init() {
         const {data} = await useFetch<any[]>('/api/project')
@@ -25,8 +26,21 @@ export const useProjectStore = defineStore('project',()=>{
         }
     }
 
+    async function get_project(m: any) {
+        const data = await $fetch<any[]>('/api/proj',
+            {
+                query: {project_name: m}
+            }
+        )
+        const list = data
+        if(list!=null) {
+            proj.splice(0,proj.length)  //Clear the list
+            proj.push(...list)
+        }
+    }
+
     init()
 
-    return {project}
+    return {project, get_project, proj}
 })
 

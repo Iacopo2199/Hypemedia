@@ -15,9 +15,7 @@
     <nav>
       <button class="btn" onclick="history.back()">BACK</button>
       <NuxtLink to="/about_us">ABOUT US</NuxtLink>
-      <NuxtLink to="/projects">ALL PROJECTS</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
-      <NuxtLink to="/services">ALL SERVICES</NuxtLink>
       <NuxtLink to="/activities">ALL ACTIVITIES</NuxtLink>
       <NuxtLink to="/contact_us">CONTACT US</NuxtLink>
     </nav>
@@ -64,11 +62,11 @@ header
 
 nav {
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
 nav a {
-  font-size: 17pt;
+  font-size: 21pt;
   font-weight: bold;
 }
 

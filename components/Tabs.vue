@@ -3,6 +3,8 @@
 
 <template>
   <div class="tabs-container">
+    <h1>This is the list of our activities</h1>
+    <br>
     <div class="tabs">
       <button v-for="tab in tabs" :key="tab.name" @click="selectedTab = tab.name" :class="{ active: selectedTab === tab.name }">
         {{ tab.name }}
@@ -60,6 +62,7 @@ button {
   cursor: pointer;
   background-color: #f0f0f0;
   border-radius: 4px;
+  font-size: 50px;
 }
 
 button.active {
