@@ -26,8 +26,8 @@ export default {
     return {
       selectedTab: 'Projects',
       tabs: [
-        { name: 'Projects', component: Projects },
-        { name: 'Services', component: Services },
+        { name: 'Projects', component: shallowRef(Projects) },
+        { name: 'Services', component: shallowRef(Services) },
       ]
     };
   },
