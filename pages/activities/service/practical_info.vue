@@ -8,23 +8,38 @@ const info = store.practical_info
 <template>
 
 <NavBarComponent class="navbar">
-      <li><a href="#"></a></li>
+      <li><a href="#ava">Availability</a></li>
+      <li><a href="#log">Logistical info</a></li>
+      <li><a href="#duration">Duration</a></li>
+      <li><a href="#location">Location</a></li>
 </NavBarComponent>
 
-    <div>
-      <h1>Practical info</h1>
-      <h4></h4>
-    </div>
-
     <ul>
-      <li v-for="i in info">
-      {{ i.service_name }} , {{ i.availability}}
-      </li>
+      <span v-for="i in info">
+        <b><h1 class="w3-container w3-center w3-padding-32">{{ i.service_name }}</h1></b>
+
+        <b><h1 id="ava" class="w3-container w3-center w3-padding-32">Availability</h1></b>
+        <div>{{ i.availability }}</div>
+
+        <b><h1 id="log" class="w3-container w3-center w3-padding-32">Logistical info</h1></b>
+        <div>{{ i.logistical_info}}</div>
+
+        <b><h1 id="duration" class="w3-container w3-center w3-padding-32">Service duration</h1></b>
+        <div>{{ i.duration}}</div>
+
+        <b><h1 id="location" class="w3-container w3-center w3-padding-32">Service location</h1></b>
+        <div>{{ i.location}}</div>
+
+      </span>
     </ul>
 
 </template>
 
 <style scoped>
+
+span{
+  text-align: center;
+}
 
 .navbar {
 
