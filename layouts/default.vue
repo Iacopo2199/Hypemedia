@@ -28,7 +28,7 @@
   </main>
 
   <footer>
-    Sweedish insegnaci qualcosa :)
+    Made by Citrulli :)
   </footer>
 </template>
 

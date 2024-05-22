@@ -1,5 +1,4 @@
-import type { NuxtLink } from "#build/components";
-<script setup lang="">
+<script setup>
 import { usePeopleStore } from '~/stores/people';
 
 const store = usePeopleStore()
@@ -8,12 +7,13 @@ const person = store.people
 
 <template>
   
+
+    <span style="text-align: center;">
     <div>
       <h1>Our people</h1>
       <h4>This is the list of our people</h4>
     </div>
-
-    <body style="text-align: center;">
+    
     <ul>
       <li v-for="p in person">
       <NuxtLink to="/people/person">
@@ -24,7 +24,7 @@ const person = store.people
       </li>
     </ul>
     
-  </body>
+  </span>
 </template>
 
 <style scoped>
