@@ -368,85 +368,85 @@ if(await Cv.count()===0)
             cv_code: 7,
             personName: 'Evelyn Mitchell',
             cv_image: '/_nuxt/assets/cv/evelyn/evelyn_cv.png',
-            cv_link: '/_nuxt/assets/cv/evelyn/evelyn.pdf'
+            cv_link: '/_nuxt/assets/cv/evelyn/evelynCv.pdf'
         },
         {
             cv_code: 8,
             personName: 'Isabella Morgan',
             cv_image: '/_nuxt/assets/cv/isabella/isabella_cv.png',
-            cv_link: '/_nuxt/assets/cv/isabella/isabella.pdf'
+            cv_link: '/_nuxt/assets/cv/isabella/isabellaCv.pdf'
         },
         {
             cv_code: 9,
             personName: 'James Bennett',
             cv_image: '/_nuxt/assets/cv/james/james_cv.png',
-            cv_link: '/_nuxt/assets/cv/james/james.pdf'
+            cv_link: '/_nuxt/assets/cv/james/jamesCv.pdf'
         },
         {
             cv_code: 10,
             personName: 'Jeff Blake',
             cv_image: '/_nuxt/assets/cv/jeff/jeff_cv.png',
-            cv_link: '/_nuxt/assets/cv/jeff/jeff.pdf'
+            cv_link: '/_nuxt/assets/cv/jeff/jeffCv.pdf'
         },
         {
             cv_code: 11,
             personName: 'Liam Harper',
             cv_image: '/_nuxt/assets/cv/liam/liam_cv.png',
-            cv_link: '/_nuxt/assets/cv/liam/liam.pdf'
+            cv_link: '/_nuxt/assets/cv/liam/liamCv.pdf'
         },
         {
             cv_code: 12,
             personName: 'Lily Perry',
             cv_image: '/_nuxt/assets/cv/lily/lily_cv.png',
-            cv_link: '/_nuxt/assets/cv/lily/lily.pdf'
+            cv_link: '/_nuxt/assets/cv/lily/lilyCv.pdf'
         },
         {
             cv_code: 13,
             personName: 'Lucas Foster',
             cv_image: '/_nuxt/assets/cv/lucas/lucas_cv.png',
-            cv_link: '/_nuxt/assets/cv/lucas/lucas.pdf'
+            cv_link: '/_nuxt/assets/cv/lucas/lucasCv.pdf'
         },
         {
             cv_code: 14,
             personName: 'Mason Hayes',
             cv_image: '/_nuxt/assets/cv/mason/mason_cv.png',
-            cv_link: '/_nuxt/assets/cv/mason/mason.pdf'
+            cv_link: '/_nuxt/assets/cv/mason/masonCv.pdf'
         },
         {
             cv_code: 15,
             personName: 'Mia Coleman',
             cv_image: '/_nuxt/assets/cv/mia/mia_cv.png',
-            cv_link: '/_nuxt/assets/cv/mia/mia.pdf'
+            cv_link: '/_nuxt/assets/cv/mia/miaCv.pdf'
         },
         {
             cv_code: 16,
             personName: 'Noelle Brooks',
             cv_image: '/_nuxt/assets/cv/noelle/noelle_cv.png',
-            cv_link: '/_nuxt/assets/cv/noelle/noelle.pdf'
+            cv_link: '/_nuxt/assets/cv/noelle/noelleCv.pdf'
         },
         {
             cv_code: 17,
             personName: 'Olivia Carter',
             cv_image: '/_nuxt/assets/cv/olivia/olivia_cv.png',
-            cv_link: '/_nuxt/assets/cv/olivia/olivia.pdf'
+            cv_link: '/_nuxt/assets/cv/olivia/oliviaCv.pdf'
         },
         {
             cv_code: 18,
             personName: 'Sonia Kade',
             cv_image: '/_nuxt/assets/cv/sonia/sonia_cv.png',
-            cv_link: '/_nuxt/assets/cv/sonia/sonia.pdf'
+            cv_link: '/_nuxt/assets/cv/sonia/soniaCv.pdf'
         },
         {
             cv_code: 19,
             personName: 'Sophia Bennett',
             cv_image: '/_nuxt/assets/cv/sophia/sophia_cv.png',
-            cv_link: '/_nuxt/assets/cv/sophia/sophia.pdf'
+            cv_link: '/_nuxt/assets/cv/sophia/sophiaCv.pdf'
         },
         {
             cv_code: 20,
             personName: 'Steven Hu',
             cv_image: '/_nuxt/assets/cv/steven/steven_cv.png',
-            cv_link: '/_nuxt/assets/cv/steven/steven.pdf'
+            cv_link: '/_nuxt/assets/cv/steven/stevenCV.pdf'
         },
     ])
 
