@@ -1,3 +1,8 @@
 body {
-    background-color: rgba(223, 228, 234, 0.304);
+    background-color: #ffddd2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header, footer {
+    background-color: #669994;
 }

@@ -10,10 +10,10 @@
 
   <header>
     <NuxtLink to="/">
-    <h1><img src="~/assets/img/logo.png" width="60%"></h1>
+    <h1><img src="~/assets/img/logo.png" width="50%"></h1>
   </NuxtLink>
     <nav>
-      <button class="btn" onclick="history.back()">BACK</button>
+      <button class="btn" onclick="history.back()"><img src="~/assets/img/backarrow.svg" width="30%"></button>
       <NuxtLink to="/about_us">ABOUT US</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
       <NuxtLink to="/activities">ALL ACTIVITIES</NuxtLink>
@@ -35,7 +35,7 @@
 <style scoped>
 header, footer
 {
-  background-color: orange;
+  background-color: #0BC3A9;
 }
 
 footer
@@ -43,7 +43,7 @@ footer
   flex-shrink: 0;
   text-align: center;
   margin-top: auto;
-  border-top: 5px solid brown;
+  border-top: 5px solid #006D77;
   padding: 10px;
 
   min-height: 1vh;
@@ -53,7 +53,7 @@ header
 {
   padding: 0 20px 0 20px;
   margin-bottom: 0;
-  border-bottom: 5px solid brown;
+  border-bottom: 5px solid #006D77;
 
   display: flex;
   justify-content: space-between;
@@ -71,29 +71,22 @@ nav a {
 }
 
 .btn {
-  background: #d93434;
-  background-image: -webkit-linear-gradient(top, #d93434, #330101);
-  background-image: -moz-linear-gradient(top, #d93434, #330101);
-  background-image: -ms-linear-gradient(top, #d93434, #330101);
-  background-image: -o-linear-gradient(top, #d93434, #330101);
+  background: black;
   background-image: linear-gradient(to bottom, #d93434, #330101);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Arial;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 5px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  max-width: 100%;
+  height: auto;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .btn:hover {
   background: #ff0000;
-  background-image: -webkit-linear-gradient(top, #ff0000, #ff007b);
-  background-image: -moz-linear-gradient(top, #ff0000, #ff007b);
-  background-image: -ms-linear-gradient(top, #ff0000, #ff007b);
-  background-image: -o-linear-gradient(top, #ff0000, #ff007b);
-  background-image: linear-gradient(to bottom, #ff0000, #ff007b);
+  background-image: linear-gradient(to bottom, #c51818, #c51818);
   text-decoration: none;
 }
 
