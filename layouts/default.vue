@@ -78,10 +78,11 @@ nav a {
   font-size: 5px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  max-width: 100%;
-  height: auto;
+  max-width: 70%;
+  height: 70%;
   margin-left: 10px;
   margin-top: 10px;
+  align-self: flex-start;
 }
 
 .btn:hover {
