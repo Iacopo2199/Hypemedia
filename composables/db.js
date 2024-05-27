@@ -180,11 +180,7 @@ const People = db.define('people',{
         type: DataTypes.STRING,
         allowNull: false
     },
-    project_name: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    service_name: {
+    role: {
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -225,102 +221,121 @@ if(await People.count()===0)
             name: 'Emma Rock',
             activity: 'Business manager',
             picture: '/_nuxt/assets/img/people/emma.png',
-            project_name: 'Project 1',
+            role: "A business manager plays a critical role in ensuring the smooth operation and success of an organization. Developing and defining the company's short-term and long-term goals. Conducting research to understand market trends, customer needs, and competitor strategies. Identifying new business opportunities and partnerships to drive growth. Creating and managing budgets to ensure financial health and operational efficiency. Reviewing financial statements, monitoring cash flow, and assessing financial performance. Implementing measures to reduce costs and improve profitability."
         },
         {
             name: 'Jeff Blake',
             activity: 'Developer',
-            picture: '/_nuxt/assets/img/people/jeff.png'
+            picture: '/_nuxt/assets/img/people/jeff.png',
+            role: "Collaborating with stakeholders to understand requirements and planning the project. Creating system architecture and detailed design specifications. Writing clean, efficient code, performing unit tests, and managing code versions using tools like Git. Conducting integration and system testing to identify and fix bugs. Preparing and automating the deployment process, and managing configurations for different environments. Monitoring software performance, resolving incidents, and deploying updates and patches. Participating in team meetings, code reviews, and writing documentation."
         },
         {
             name: 'Sonia Kade',
             activity: 'Human Resource manager',
-            picture: '/_nuxt/assets/img/people/sonia.png'
+            picture: '/_nuxt/assets/img/people/sonia.png',
+            role: "A Human Resource (HR) Manager plays a critical role in managing an organization's most valuable asset: its people. Their responsibilities encompass a wide range of activities aimed at maximizing employee performance and ensuring organizational effectiveness. Analyzing and forecasting staffing needs to ensure the organization has the right number of employees with the right skills. Creating job descriptions, posting job ads, and utilizing various recruitment channels. Reviewing applications, conducting interviews, and selecting suitable candidates. Facilitating the integration of new hires into the organization, ensuring they understand their roles and company culture."
         },
         {
             name: 'Sophia Bennett',
             activity: 'Counselor',
-            picture: '/_nuxt/assets/img/people/sophia.png'
+            picture: '/_nuxt/assets/img/people/sophia.png',
+            role: "A counselor plays a vital role in providing support, guidance, and therapeutic interventions to individuals, groups, and communities facing various emotional, psychological, and social challenges. Conducting interviews and assessments to understand clients' issues, history, and needs. Administering and interpreting psychological tests and assessments as needed. Identifying mental health conditions based on assessments and diagnostic criteria. Providing one-on-one sessions to help clients address personal issues and develop coping strategies. Facilitating group sessions to support individuals with shared experiences or challenges."
         },
         {
             name: 'Liam Harper',
             activity: 'Financial Advisor',
-            picture: '/_nuxt/assets/img/people/liam.png'
+            picture: '/_nuxt/assets/img/people/liam.png',
+            role: "A financial advisor plays a crucial role in helping individuals and organizations manage their finances and achieve their financial goals. Their responsibilities span a range of activities, from financial planning and investment management to client education and regulatory compliance. Helping clients identify and articulate their short-term and long-term financial goals. Assisting clients in creating and maintaining a budget to manage their income, expenses, and savings effectively. Advising clients on strategies to reduce and manage debt, including consolidation and repayment plans."
         },
         {
             name: 'Ava Reed',
             activity: 'Program Coordinator',
-            picture: '/_nuxt/assets/img/people/ava.png'
+            picture: '/_nuxt/assets/img/people/ava.png',
+            role: "A program coordinator plays a vital role in managing and overseeing the implementation of programs within an organization. Their responsibilities span from planning and organizing to monitoring and evaluating program activities. Conducting assessments to identify the needs and objectives of the program. Developing detailed plans, including goals, objectives, timelines, and resources needed for program implementation. Creating and managing the program budget, ensuring funds are allocated appropriately and efficiently. Securing and managing resources such as staff, materials, and facilities needed for program activities."
         },
         {
             name: 'Mason Hayes',
             activity: 'Website Specialist',
-            picture: '/_nuxt/assets/img/people/mason.png'
+            picture: '/_nuxt/assets/img/people/mason.png',
+            role: "A website specialist plays a crucial role in designing, developing, maintaining, and optimizing websites to ensure they meet user needs and organizational goals. Creating visually appealing and user-friendly website designs that align with brand identity. Writing and editing code for the front end of the website using HTML, CSS, JavaScript, and other web technologies. Managing server-side operations, databases, and application logic to ensure website functionality. Collaborating with content creators to produce high-quality content that meets SEO and user engagement standards."
         },
         {
             name: 'Olivia Carter',
             activity: 'Legal Advisor',
-            picture: '/_nuxt/assets/img/people/olivia.png'
+            picture: '/_nuxt/assets/img/people/olivia.png',
+            role: "A legal advisor plays a critical role in providing legal guidance and support to individuals, businesses, and organizations to ensure compliance with laws and regulations, mitigate risks, and navigate legal challenges. Providing expert legal advice to clients on a wide range of legal issues, including contracts, property, employment, corporate law, and more. Evaluating potential legal risks associated with business decisions and advising on risk mitigation strategies. Preparing and presenting formal legal opinions on complex legal matters to guide client decisions."
         },
         {
             name: 'Noelle Brooks',
             activity: 'Community Liaison',
-            picture: '/_nuxt/assets/img/people/noelle.png'
+            picture: '/_nuxt/assets/img/people/noelle.png',
+            role: "A community liaison serves as a bridge between an organization and the community it serves, fostering communication, collaboration, and understanding. Their role is crucial in ensuring that the needs and concerns of the community are addressed while promoting the organization's initiatives. Building and maintaining relationships with community members, leaders, and organizations. Sharing information about the organization's programs, services, and events with the community. Gathering feedback from the community to understand their needs, concerns, and suggestions."
         },
         {
             name: 'Isabella Morgan',
             activity: 'Business Manager',
-            picture: '/_nuxt/assets/img/people/isabella.png'
+            picture: '/_nuxt/assets/img/people/isabella.png',
+            role: "A business manager plays a critical role in the planning, organization, and supervision of various business activities to ensure an organization’s operational efficiency and financial performance. They are responsible for overseeing daily operations, managing resources, and leading teams to achieve strategic goals. Establishing short-term and long-term goals aligned with the organization's strategic vision. Developing and implementing business strategies to achieve organizational objectives. Tracking progress towards goals and making adjustments to strategies as needed."
         },
         {
             name: 'Lucas Foster',
             activity: 'Website Specialist',
-            picture: '/_nuxt/assets/img/people/lucas.png'
+            picture: '/_nuxt/assets/img/people/lucas.png',
+            role: "A website specialist plays a crucial role in designing, developing, maintaining, and optimizing websites to ensure they meet user needs and organizational goals. Creating visually appealing and user-friendly website designs that align with brand identity. Writing and editing code for the front end of the website using HTML, CSS, JavaScript, and other web technologies. Managing server-side operations, databases, and application logic to ensure website functionality. Collaborating with content creators to produce high-quality content that meets SEO and user engagement standards."
         },
         {
             name: 'Mia Coleman',
             activity: 'Crisis Intervention Specialist',
-            picture: '/_nuxt/assets/img/people/mia.png'
+            picture: '/_nuxt/assets/img/people/mia.png',
+            role: "A Crisis Intervention Specialist plays a critical role in providing immediate support and intervention to individuals experiencing acute emotional, mental, or psychological distress. Their responsibilities involve assessing the situation, offering support, implementing intervention strategies, and connecting individuals with necessary resources and services. Quickly assessing the severity of the crisis and the immediate needs of the individual. Providing immediate support to help stabilize the individual emotionally and mentally."
         },
         {
             name: 'Lily Perry',
             activity: 'Public Relations Manager',
-            picture: '/_nuxt/assets/img/people/lily.png'
+            picture: '/_nuxt/assets/img/people/lily.png',
+            role: "A Public Relations (PR) Manager plays a pivotal role in shaping and maintaining the public image of an organization. They are responsible for managing communication strategies, media relations, and public perception to build a positive reputation and foster strong relationships with various stakeholders. Developing and implementing comprehensive PR strategies and communication plans to enhance the organization's image. Crafting clear, consistent, and compelling messages that align with the organization's goals and values."
         },
         {
             name: 'Charlotte Lee',
             activity: 'Volunteer Coordinator',
-            picture: '/_nuxt/assets/img/people/charlotte.png'
+            picture: '/_nuxt/assets/img/people/charlotte.png',
+            role: "A Volunteer Coordinator plays a crucial role in managing and organizing volunteer programs within an organization. They are responsible for recruiting, training, and supervising volunteers to ensure effective and efficient support of the organization’s mission and activities. Developing and implementing strategies to attract and recruit volunteers through various channels such as social media, community events, and partnerships with local organizations. Engaging with community groups, schools, businesses, and other potential sources of volunteers to raise awareness about volunteer opportunities."
         },
         {
             name: 'James Bennett',
             activity: 'Case Manager',
-            picture: '/_nuxt/assets/img/people/james.png'
+            picture: '/_nuxt/assets/img/people/james.png',
+            role: "A Case Manager plays a crucial role in providing comprehensive support and advocacy for individuals or families in need of assistance. They work closely with clients to assess their needs, develop personalized plans, and coordinate services to help them achieve their goals and improve their quality of life. Conducting comprehensive assessments to identify the strengths, needs, and goals of clients. Collaborating with clients to establish realistic and achievable goals based on their individual circumstances."
         },
         {
             name: 'Amelia Phillips',
             activity: 'Healthcare Advisor',
-            picture: '/_nuxt/assets/img/people/amelia.png'
+            picture: '/_nuxt/assets/img/people/amelia.png',
+            role: "A Healthcare Advisor plays a vital role in providing guidance, support, and information to individuals and organizations within the healthcare sector. They help clients navigate the complex healthcare landscape, make informed decisions, and optimize healthcare outcomes. Providing clients with accurate and up-to-date information about health conditions, treatment options, preventive measures, and healthy lifestyle choices. Educating clients on strategies for preventing common health problems, such as promoting vaccinations, healthy eating habits, exercise, and stress management."
         },
         {
             name: 'Emily Wang',
             activity: 'Job Training Specialist',
-            picture: '/_nuxt/assets/img/people/emily.png'
+            picture: '/_nuxt/assets/img/people/emily.png',
+            role: "A Job Training Specialist, also known as a Training Coordinator or Employment Training Specialist, plays a crucial role in facilitating job training programs and initiatives to help individuals develop the skills and knowledge needed to succeed in the workforce. Assessing the skills, knowledge, and training needs of individuals or target groups to identify areas for improvement. Designing and developing training materials, lesson plans, and curricula tailored to the specific needs of participants and the requirements of the job market."
         },
         {
             name: 'Evelyn Mitchell',
             activity: 'Website Specialist',
-            picture: '/_nuxt/assets/img/people/evelyn.png'
+            picture: '/_nuxt/assets/img/people/evelyn.png',
+            role: "A website specialist plays a crucial role in designing, developing, maintaining, and optimizing websites to ensure they meet user needs and organizational goals. Creating visually appealing and user-friendly website designs that align with brand identity. Writing and editing code for the front end of the website using HTML, CSS, JavaScript, and other web technologies. Managing server-side operations, databases, and application logic to ensure website functionality. Collaborating with content creators to produce high-quality content that meets SEO and user engagement standards."
         },
         {
             name: 'Elijah Anderson',
             activity: 'Fundraising Coordinator',
-            picture: '/_nuxt/assets/img/people/elijah.png'
+            picture: '/_nuxt/assets/img/people/elijah.png',
+            role: "A Fundraising Coordinator is responsible for planning, implementing, and overseeing fundraising initiatives for an organization or cause. They play a crucial role in generating financial support to sustain programs, projects, and operations. Developing comprehensive fundraising strategies aligned with the organization’s goals, mission, and financial needs. Establishing fundraising targets and objectives, both short-term and long-term, to guide fundraising efforts. Identifying and exploring various fundraising methods and sources, including individual donors, corporate sponsorships, grants, events, and online campaigns."
         },
         {
             name: 'Steven Hu',
             activity: 'Policy Advocate',
-            picture: '/_nuxt/assets/img/people/steven.png'
+            picture: '/_nuxt/assets/img/people/steven.png',
+            role: "A Policy Advocate serves as a champion for social change by influencing public policy decisions and advocating for the rights and interests of specific populations or causes. Conducting in-depth research on legislative proposals, regulations, and policy issues relevant to the advocacy agenda. Analyzing data, statistics, and evidence to understand the impact of existing policies and identify areas for improvement or reform. Identifying emerging trends, challenges, and disparities affecting the target population or issue area, and assessing their policy implications. Developing policy recommendations and solutions based on research findings, best practices, and stakeholder input."
         }
     ])
     

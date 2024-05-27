@@ -17,11 +17,21 @@ const cv = useCvStore()
 </script>
 
 <template>
+
+
+    <NavBarComponent class="navbar">
+      <li><a href="#activity">Activity</a></li>
+    </NavBarComponent>
     
       <li v-for="p in person">
-      <h1>{{ p.name }}</h1>
-      <h2>{{ p.activity }} </h2>
-      <img :src="p.picture">
+
+      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.name }}</h1></b>
+
+      <b><img :src="p.picture"></b>
+
+      <b><h1 id="activity" class="w3-container w3-center w3-padding-32">Activity: {{ p.activity }}</h1>
+        <div>{{ p.role }}</div>
+      </b>
       <br><br>
 
 
@@ -120,6 +130,36 @@ height: 300px;
   .button-73 {
     font-size: 1.5rem;
     padding: .75rem 2rem;
+  }
+}
+
+div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 20px;
+}
+
+.navbar {
+
+h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
+    font-size: 50px;              
+}
+
+li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: red;
   }
 }
 
