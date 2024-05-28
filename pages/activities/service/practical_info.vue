@@ -2,6 +2,17 @@
 import { usePracticalInfoStore } from '~/stores/practical_info';
 const store = usePracticalInfoStore()
 const info = store.practical_info
+
+useHead({
+    title: 'Practical info page',
+    meta: [
+      {
+        name: 'practical info page',
+        content: 'This is the practical info page of the website and here you can see the information of the related service' 
+      },
+    ],
+  });
+
 </script>
 
 

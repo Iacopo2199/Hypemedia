@@ -1,4 +1,15 @@
-<script setup lang="ts">
+<script setup>
+
+useHead({
+    title: 'Activity page',
+    meta: [
+      {
+        name: 'activity page',
+        content: 'This is the activity page of the website and here you see all the projects or services available' 
+      },
+    ],
+  });
+
 </script>
 
 

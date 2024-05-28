@@ -4,6 +4,16 @@ import { useCvStore } from '~/stores/cv';
 const store = useCvStore()
 const cv = store.cv
 
+useHead({
+    title: 'Cv page',
+    meta: [
+      {
+        name: 'Cv page',
+        content: 'This is the Cv page of the website and here you can read and download the cv of the selected person' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

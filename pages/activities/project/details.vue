@@ -3,6 +3,17 @@ import { useDetailsStore } from '~/stores/details';
 import NavBarComponent from '~/components/NavBarComponent.vue';
 const store = useDetailsStore()
 const details = store.details
+
+useHead({
+    title: 'Details page',
+    meta: [
+      {
+        name: 'details page',
+        content: 'This is the details page of the website and here you can see the details of the selected project' 
+      },
+    ],
+  });
+
 </script>
 
 

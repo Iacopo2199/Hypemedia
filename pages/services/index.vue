@@ -4,6 +4,16 @@ import { useServiceStore } from '~/stores/service';
 const store = useServiceStore()
 const service = store.service
 
+useHead({
+    title: 'Services page',
+    meta: [
+      {
+        name: 'service page',
+        content: 'This is the service page of the website and here you see all the available services' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

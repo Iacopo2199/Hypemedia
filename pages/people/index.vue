@@ -3,6 +3,17 @@ import { usePeopleStore } from '~/stores/people';
 
 const store = usePeopleStore()
 const person = store.people
+
+useHead({
+    title: 'People page',
+    meta: [
+      {
+        name: 'people page',
+        content: 'This is the people page of the website and here you can see all the people working in our centre' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

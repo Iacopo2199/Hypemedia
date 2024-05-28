@@ -14,6 +14,17 @@ const store = usePeopleStore()
 const person = store.pers
 const cv = useCvStore()
 
+
+useHead({
+    title: 'Person page',
+    meta: [
+      {
+        name: 'person page',
+        content: 'This is the person page of the website and here you can see all the info of the related person' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

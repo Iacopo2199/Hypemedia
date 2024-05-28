@@ -1,4 +1,14 @@
-<script setup lang="ts">
+<script setup>
+
+useHead({
+    title: 'Home page',
+    meta: [
+      {
+        name: 'home page',
+        content: 'This is the home page of the website and the starting point of the application' 
+      },
+    ],
+  });
 
 </script>
 

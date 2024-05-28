@@ -1,6 +1,16 @@
-<script setup lang="ts">
+<script setup>
 
-function say(message: any){
+useHead({
+    title: 'Contact us',
+    meta: [
+      {
+        name: 'contact us',
+        content: 'This is the contact us page of the website and where you can send info you want to know from us ' 
+      },
+    ],
+  });
+
+function say(message){
     alert(message)
 }
 

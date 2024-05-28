@@ -8,6 +8,17 @@ const store_people = usePeopleStore()
 const practical_info = usePracticalInfoStore()
 const store = useServiceStore()
 const service = store.serv
+
+useHead({
+    title: 'Service page',
+    meta: [
+      {
+        name: 'service page',
+        content: 'This is the service page of the website and here you can see the info of the related service' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

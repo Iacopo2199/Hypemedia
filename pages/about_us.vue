@@ -1,9 +1,20 @@
-<script setup lang="ts">
+<script setup>
 import { useCenterStore } from '~/stores/center';
 import NavBarComponent from '~/components/NavBarComponent.vue';
 
 const store = useCenterStore()
 const center = store.center
+
+useHead({
+    title: 'About us',
+    meta: [
+      {
+        name: 'about us page',
+        content: 'This is the about us page of the website... here you can find info about who we are' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

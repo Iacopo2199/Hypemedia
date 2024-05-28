@@ -3,6 +3,17 @@ import { useProjectStore } from '~/stores/project';
 
 const store = useProjectStore()
 const project = store.project
+
+useHead({
+    title: 'Projects page',
+    meta: [
+      {
+        name: 'project page',
+        content: 'This is the project page of the website and here you see all the available projects' 
+      },
+    ],
+  });
+
 </script>
 
 <template>

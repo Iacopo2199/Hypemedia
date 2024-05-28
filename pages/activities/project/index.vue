@@ -8,6 +8,17 @@ const store_people = usePeopleStore()
 const details = useDetailsStore()
 const store = useProjectStore()
 const project = store.proj
+
+useHead({
+    title: 'Project page',
+    meta: [
+      {
+        name: 'project page',
+        content: 'This is the project page of the website and here you can see all the info of the related project' 
+      },
+    ],
+  });
+
 </script>
 
 <template>
