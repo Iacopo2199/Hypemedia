@@ -67,6 +67,10 @@ const Project = db.define('project', {
     picture: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    goals: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },{
     createdAt: false,
@@ -598,11 +602,12 @@ if(await Project.count()===0)
                 'Our job assistance program includes career counseling, resume building, and job placement services, ensuring that each mother has the opportunity to achieve professional success.' +
                 'By fostering a supportive network and leveraging community resources, NewHorizonsForMoms is committed to helping mothers achieve independence and security.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'GOALS: Enhance the parenting skills and confidence of 20 single and new mothers.\n' +
+            goals: 'GOALS: Enhance the parenting skills and confidence of 20 single and new mothers.\n' +
                 'Ensure that participating mothers have access to reliable and affordable childcare.\n' +
                 'Alleviate the economic stress experienced by single and new mothers.\n' +
                 'Support mothers in finding and securing stable employment.\n' +
                 'Foster a supportive community among participating mothers.',
+            picture: 'pic',
         },
         {
             project_name: 'NewSafeShelter',
@@ -613,10 +618,11 @@ if(await Project.count()===0)
                 'In addition to housing and psychological support, NewSafeShelter aims to empower mothers through various resources and programs that foster personal and professional growth.' +
                 'We offer workshops on life skills, financial literacy, and job readiness, helping mothers to build the skills necessary for long-term self-sufficiency. By creating a safe, supportive environment, NewSafeShelter enables mothers to heal, rebuild their confidence, and create a stable future for themselves and their children.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'GOALS: Provide a secure and stable living environment for mothers and their children escaping domestic violence.\n' +
+            goals: 'GOALS: Provide a secure and stable living environment for mothers and their children escaping domestic violence.\n' +
                 'Address the psychological and emotional needs of mothers and their children who have experienced domestic violence.\n' +
                 'Empower mothers with the skills needed for independence and self-sufficiency.\n' +
                 'Foster a supportive community where mothers can share experiences and support each other.',
+            picture: 'pic',
         },
         {
             project_name: 'HerIntegration',
@@ -625,10 +631,11 @@ if(await Project.count()===0)
             description: 'HerIntegration is a comprehensive project designed to assist 20 foreign women and their children in successfully integrating into their new community.' +
                 'Recognizing the challenges faced by immigrants, we provide tailored language education programs that cater to different proficiency levels, ensuring that participants can effectively communicate and navigate their new environment. The program includes language classes that focus on practical communication skills, cultural nuances, and essential vocabulary for daily life for both the mother and the children' +
                 'Our job placement services are aimed at helping women find suitable employment opportunities that match their skills and experiences and consist of career counseling, resume building, interview preparation, and connections with local employers. Additionally, we offer assistance in securing safe and affordable housing, ensuring that families have a stable living environment.',
-            picture: 'GOALS:Ensure that participants gain proficiency in the local language for effective communication and integration.\n' +
+            goals: 'GOALS:Ensure that participants gain proficiency in the local language for effective communication and integration.\n' +
                 'Assist women in finding employment that matches their skills and experiences.\n' +
                 'Help participants secure safe and affordable housing.\n' +
                 'Foster a sense of belonging and community among participants.',
+            picture: 'pic',
         },
         {
             project_name: 'SheWorks',
@@ -639,9 +646,10 @@ if(await Project.count()===0)
                 'The project includes structured training programs that cover a wide range of professional skills, from basic computer literacy to advanced vocational training. Participants will have access to mentorship and career counseling services to help them navigate their career paths effectively.' +
                 'Additionally, SheWorks collaborates with various industries to create internship and job opportunities tailored to the skills and interests of the women involved.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'GOALS: Provide real-world work experience and job opportunities for women.\n' +
+            goals: 'GOALS: Provide real-world work experience and job opportunities for women.\n' +
                 'Enhance the professional skills and employability of participants.\n' +
                 'Enable participants to achieve economic independence and fair wages.',
+            picture: 'pic',
         },
         {
             project_name: 'SheRaise',
@@ -651,9 +659,10 @@ if(await Project.count()===0)
                 'This support extends through high school and into university, ensuring that financial constraints do not hinder their academic progress. In addition to financial aid, SheRaise provides access to tutors who offer personalized lessons and academic support.' +
                 'These tutors help the girls excel in their studies, offering guidance on subjects they find challenging and preparing them for exams. The project also addresses practical needs related to education, such as providing food tickets for meals near schools, assistance with transportation and affordable housing' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'GOALS: Ensure that financial barriers do not impede the educational progress of the girls.\n' +
+            goals: 'GOALS: Ensure that financial barriers do not impede the educational progress of the girls.\n' +
                 'Enhance the academic performance and confidence of the participants.\n' +
                 'Support the overall well-being of the participants, ensuring a balanced and conducive environment for learning.',
+            picture: 'pic',
         }
     ])
            

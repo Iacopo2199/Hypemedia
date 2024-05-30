@@ -34,6 +34,8 @@ useHead({
 
       <b><h1 class="w3-container w3-center w3-padding-32">{{ p.picture }}</h1></b>
 
+      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.goals }}</h1></b>
+
       <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: <NuxtLink to="/people/person">
         <button @click="store_people.get_person(p.personName)" class="button-73">
           {{ p.personName }}

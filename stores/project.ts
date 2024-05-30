@@ -10,6 +10,7 @@ interface Project {
     personName:string,
     short_description:string,
     description:string,
+    goals:string,
     picture:string
 }
 
