@@ -470,25 +470,102 @@ await Service.sync()
 if(await Service.count()===0)
     await Service.bulkCreate([
         {
-            service_name: 'Service name1',
+            service_name: 'HerLegalAid',
             personName: 'Emma Rock',
-            short_description: 'short desc1',
-            description: 'description1',
+            short_description: 'Offering legal consultations, resources, and pro bono services to support women in legal matters.',
+            description: 'Our dedicated legal aid services provide essential support for women facing legal challenges. We offer free or affordable initial consultations with experienced legal professionals who specialize in areas such as domestic violence, workplace discrimination, and family law.' +
+                'Our extensive online resource library includes guides and articles to help women understand their legal rights and navigate the complexities of the legal system.' +
+                'Additionally, we partner with law firms to provide pro bono legal services, ensuring that women who cannot afford representation still have access to justice.' +
+                'Through educational seminars, we inform women about their rights and the legal processes involved, empowering them to take informed actions. Our goal is to ensure that every woman has the legal support she needs to protect her rights and achieve fair outcomes.',
             benefits: 'benefits1',
             picture: 'picture1',
             testimonials: 'testimonials1'
-        }
+        },
+        {
+            service_name: 'Healthier&Happier',
+            personName: 'Emma Rock',
+            short_description: 'Providing access to counseling, support groups, and wellness resources to promote mental well-being.',
+            description: 'Our comprehensive mental health support service is designed to address the unique challenges women face. We offer individual and group counseling sessions with licensed therapists, providing a safe space for women to discuss issues such as anxiety, depression, and trauma.' +
+                'Additionally, we facilitate online support groups where women can share experiences and receive peer support for challenges like postpartum depression and anxiety.' +
+                'Our wellness resources include articles, videos, and workshops focused on stress management, mindfulness, and self-care techniques, empowering women to take control of their mental health and well-being.' +
+                'Through these services, we aim to foster a supportive community that encourages healing and personal growth.',
+            benefits: 'benefits1',
+            picture: 'picture1',
+            testimonials: 'testimonials1'
+        },
+        {
+            service_name: 'Work4Women',
+            personName: 'Emma Rock',
+            short_description: 'Enhancing women’s professional growth through training, mentorship, and networking opportunities.',
+            description: 'Our career development programs are designed to empower women by providing the tools and resources they need to advance professionally.We offer a variety of skills workshops and courses on leadership, communication, digital literacy, and more, aimed at enhancing job readiness and competitiveness in the workforce.' +
+                'Through our mentorship programs, women are paired with experienced professionals in their fields who provide guidance, support, and valuable industry insights. Additionally, we organize networking events that create opportunities for women to connect with industry leaders and peers, fostering professional relationships and career opportunities.' +
+                'We also offer specialized resources for aspiring entrepreneurs, including business planning assistance and access to startup grants. Our comprehensive approach ensures that women have the support they need to achieve their career goals and attain financial independence.',
+            benefits: 'benefits1',
+            picture: 'picture1',
+            testimonials: 'testimonials1'
+        },
+        {
+            service_name: 'HappyHousehold',
+            personName: 'Emma Rock',
+            short_description: 'Offering guidance, resources, and support for women in their parenting journey.',
+            description: 'Our parenting and family support services are designed to assist women in managing the demands of motherhood. We provide access to parenting classes, covering topics such as child development, discipline strategies, and effective communication. Support groups offer a space for mothers to share experiences and gain advice from peers.' +
+                'Additionally, we offer resources on balancing work and family life, including tips for managing time and stress. For single mothers or those facing unique challenges, our services include connections to childcare options, educational resources for children, and assistance with family-related legal matters.' +
+                'Our goal is to support women in creating healthy, nurturing environments for their families.',
+            benefits: 'benefits1',
+            picture: 'picture1',
+            testimonials: 'testimonials1'
+        },
+        {
+            service_name: 'SheWellness',
+            personName: 'Emma Rock',
+            short_description: 'Promoting physical and mental well-being through health programs and community building.',
+            description: 'Our health and wellness programs are tailored to support women’s overall well-being. We offer a range of virtual fitness classes, including yoga, pilates, and strength training, suitable for all fitness levels. Nutrition counseling services help women develop healthy eating habits and create personalized diet plans.' +
+                'Additionally, we provide resources on women\'s health issues, preventive care, and maintaining a balanced lifestyle. SheWellness focus on stress management, mindfulness, and self-care techniques. By promoting a holistic approach to health, we aim to help women lead healthier, more fulfilling lives.' +
+                'To foster a sense of community and mutual support, we facilitate online wellness forums and discussion groups where women can share their health journeys, tips, and encouragement. Regular health-focused events and social activities, both online and in-person, create opportunities for women to connect, support each other, and build lasting relationships.',
+            benefits: 'benefits1',
+            picture: 'picture1',
+            testimonials: 'testimonials1'
+        },
+
     ])
     
 await Practical_info.sync() 
 if(await Practical_info.count()===0)
     await Practical_info.bulkCreate([
         {
-            service_name: 'Service name1',
+            service_name: 'HerLegalAid',
             availability: 'avail1',
             logistical_information: 'log_info1',
-            duration: 'duration1',
-            location: 'location1',
+            duration: '01/01/2020 to 31/12/2030',
+            location: 'Italy',
+        },
+        {
+            service_name: 'Healthier&Happier',
+            availability: 'avail1',
+            logistical_information: 'log_info1',
+            duration: '01/01/2020 to 31/12/2030',
+            location: 'Italy',
+        },
+        {
+            service_name: 'Work4Women',
+            availability: 'avail1',
+            logistical_information: 'log_info1',
+            duration: '01/01/2020 to 31/12/2030',
+            location: 'Italy',
+        },
+        {
+            service_name: 'HappyHousehold',
+            availability: 'avail1',
+            logistical_information: 'log_info1',
+            duration: '01/01/2020 to 31/12/2030',
+            location: 'Italy',
+        },
+        {
+            service_name: 'SheWellness',
+            availability: 'avail1',
+            logistical_information: 'log_info1',
+            duration: '01/01/2020 to 31/12/2030',
+            location: 'Italy',
         }
     ])
      
@@ -513,106 +590,70 @@ if(await Project.count()===0)
         {
             project_name: 'NewHorizonForMoms',
             personName: 'Emma Rock',
-            short_description: 'To provide comprehensive support to new and single mothers, equipping them with the resources, knowledge, and community connections necessary for effective parenting and personal well-being.',
-            description: 'NewHorizonForMoms is a holistic program dedicated to supporting new and single mothers through various stages of motherhood. Our mission is to empower these women by offering parenting tips, childcare options, and access to support groups, ensuring they have the tools and confidence needed to thrive both as individuals and as parents.\n'+
-                'The main objectives are:\n' +
-                '1)Parenting tips and education:\n' +
-                'Workshops and Seminars: Regular sessions covering essential parenting topics such as newborn care, child development milestones, positive discipline techniques, and health and nutrition for children.\n'+
-                'Online Resources: A comprehensive library of articles, videos, and e-books available on our website, covering a wide range of parenting topics.\n'+
-                'One-on-One Coaching: Personalized sessions with parenting coaches to address specific challenges and questions that mothers might have.\n'+
-                '2)Childcare Options:\n' +
-                'Daycare Services: Affordable and high-quality daycare facilities to ensure children are cared for in a safe and stimulating environment while mothers work or attend school.\n'+
-                'Babysitting Network: A vetted network of babysitters available for temporary and emergency childcare needs.\n'+
-                'Parent Co-Ops: Community-driven childcare options where mothers can take turns looking after each other’s children, fostering a sense of community and mutual support.\n' +
-                '3)Support Groups:\n' +
-                'Peer Support Groups: Regularly scheduled group meetings where mothers can share experiences, challenges, and advice in a supportive and non-judgmental environment.\n'+
-                'Specialized Support: Groups focusing on specific issues such as postpartum depression, single parenting, and managing work-life balance.\n'+
-                'Online Forums: Virtual support groups and forums for mothers who may not be able to attend in person, providing a platform for connection and advice sharing.\n'+
-                'NewHorizonForMoms is committed to building a strong community of support. We encourage participation from local businesses, healthcare providers, and volunteers to enhance our services and create a network of support for the mothers in our program.\n' +
+            short_description: 'To provide comprehensive support to new and single mothers.',
+            description: 'NewHorizonsForMoms is an innovative project designed to assist 30 single and new mothers in overcoming the challenges they face.' +
+                'Participating mothers will benefit from personalized parenting workshops that cover essential topics such as child development, nutrition, and effective communication.' +
+                'We also facilitate access to affordable childcare services, allowing mothers to pursue education or employment opportunities.' +
+                'Financial literacy workshops and direct financial aid help mitigate the pressures of economic instability, providing a foundation for long-term financial health.' +
+                'Our job assistance program includes career counseling, resume building, and job placement services, ensuring that each mother has the opportunity to achieve professional success.' +
+                'By fostering a supportive network and leveraging community resources, NewHorizonsForMoms is committed to helping mothers achieve independence and security.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'pic 1',
+            picture: 'GOALS: Enhance the parenting skills and confidence of 20 single and new mothers.\n' +
+                'Ensure that participating mothers have access to reliable and affordable childcare.\n' +
+                'Alleviate the economic stress experienced by single and new mothers.\n' +
+                'Support mothers in finding and securing stable employment.\n' +
+                'Foster a supportive community among participating mothers.',
         },
         {
             project_name: 'NewSafeShelter',
             personName: 'Matteo Huang',
-            short_description: 'To provide safe, supportive, and transitional housing for mothers who are victims of domestic violence, helping them to rebuild their lives in a secure and stable environment.',
-            description: 'NewSafeShelter is a dedicated initiative aimed at assisting mothers who have experienced domestic violence and are seeking new, safe homes. Our mission is to offer a comprehensive range of services that ensure safety, promote healing, and foster independence. We provide temporary housing solutions while supporting these women in finding permanent, violence-free homes.\n'+
-                'The main objectives are:\n' +
-                '1)Safe Housing Solutions:\n' +
-                'Emergency Shelters: Immediate, short-term housing options for mothers and their children escaping violent situations. These shelters provide a secure environment where they can find respite and begin the recovery process.\n'+
-                'Transitional Housing: Medium-term housing that supports mothers as they work towards long-term stability and independence. This housing includes fully furnished apartments and shared living spaces.\n'+
-                'Housing Search and moving Assistance: Help in finding and securing permanent housing, including guidance on affordable housing options and support with applications and moving.'+
-                '2)Counseling and Psychological Support:\n'+
-                'Individual Counseling: One-on-one therapy sessions with licensed counselors to address trauma, anxiety, depression, and other mental health issues stemming from domestic violence.\n' +
-                'Support Groups: Facilitated group sessions where mothers can share experiences and support each other in a safe, non-judgmental space.\n' +
-                'Child Therapy: Specialized counseling for children who have witnessed or been affected by domestic violence, helping them to process their experiences and emotions.\n' +
-                '3)Legal and Financial Assistance:\n' +
-                'Legal Aid: Access to legal services for issues related to domestic violence, including restraining orders, custody battles, and divorce proceedings.\n' +
-                'Financial Counseling: Guidance on budgeting, financial planning, and accessing financial aid programs to help mothers achieve economic independence.\n' +
-                'NewSafeShelter actively engages with local communities, businesses, and volunteers to create a robust network of support. We collaborate with local housing authorities, healthcare providers, and educational institutions to extend our services and resources.\n' +
+            short_description: 'To help mothers who are victims of domestic violence in rebuilding their life',
+            description: 'NewSafeShelter is a project designed to assist mothers escaping domestic violence in rebuilding their lives. We offer safe and stable housing for a period of two years, ensuring that women and their children have a secure place to live as they recover and regain their independence.' +
+                'The project provides comprehensive counseling and psychological support services to address the trauma experienced by both the mothers and their children.' +
+                'In addition to housing and psychological support, NewSafeShelter aims to empower mothers through various resources and programs that foster personal and professional growth.' +
+                'We offer workshops on life skills, financial literacy, and job readiness, helping mothers to build the skills necessary for long-term self-sufficiency. By creating a safe, supportive environment, NewSafeShelter enables mothers to heal, rebuild their confidence, and create a stable future for themselves and their children.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'pic 2',
+            picture: 'GOALS: Provide a secure and stable living environment for mothers and their children escaping domestic violence.\n' +
+                'Address the psychological and emotional needs of mothers and their children who have experienced domestic violence.\n' +
+                'Empower mothers with the skills needed for independence and self-sufficiency.\n' +
+                'Foster a supportive community where mothers can share experiences and support each other.',
         },
         {
-            project_name: 'SheWellness Network',
+            project_name: 'HerIntegration',
             personName: 'Anastasia Favero',
-            short_description: 'To create a supportive online community focused on enhancing women’s physical and mental health through virtual fitness classes, mental health resources, and discussion forums.',
-            description: 'SheWellnessNetwork is a comprehensive online platform dedicated to fostering women\'s physical and mental well-being. Our mission is to provide women with accessible health resources, opportunities for virtual fitness, and a supportive community to share experiences and advice. By leveraging technology, we aim to make wellness resources available to women everywhere, ensuring they can lead healthy, balanced lives.'+
-                'The main objectives are:\n' +
-                '1)Virtual Fitness Classes:\n' +
-                'Live and On-Demand Workouts: Access a variety of fitness classes including yoga, Pilates, strength training, cardio, and dance, available both live and on-demand to fit different schedules.\n'+
-                'Expert Instructors: Classes led by certified fitness instructors who provide guidance, motivation, and modifications for all fitness levels.\n' +
-                'Specialized Programs: Tailored fitness programs for specific needs such as prenatal and postnatal workouts, stress relief exercises, and beginner-friendly routines.\n' +
-                '2)Mental Health Resources:\n' +
-                'Counseling and Therapy Sessions: Virtual sessions with licensed mental health professionals offering individual and group therapy.\n' +
-                'Workshops and Webinars: Educational sessions on topics such as stress management, mindfulness, coping strategies, and building resilience.\n' +
-                'Resource Library: An extensive collection of articles, videos, and guides on various mental health topics, providing valuable information and self-help tools.\n' +
-                '3)Discussion Forums and Community support:\n' +
-                'Online Forums: Safe and moderated spaces where women can discuss a wide range of topics including health, fitness, mental wellness, parenting, relationships, and career challenges.\n' +
-                'Support Groups: Virtual support groups focusing on specific issues such as anxiety, depression, postpartum challenges, and chronic illness.\n' +
-                'Peer Mentorship: Opportunities for women to connect with mentors and peers who can offer guidance, support, and encouragement.\n' +
-                'SheWellnessNetwork encourages participation and contributions from health professionals, fitness experts, and mental health advocates to enrich the platform’s offerings. We also collaborate with wellness influencers and community leaders to host special events and awareness campaigns.\n' +
-                'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'pic 3',
+            short_description: 'To help foreign mothers integrate in Italy',
+            description: 'HerIntegration is a comprehensive project designed to assist 20 foreign women and their children in successfully integrating into their new community.' +
+                'Recognizing the challenges faced by immigrants, we provide tailored language education programs that cater to different proficiency levels, ensuring that participants can effectively communicate and navigate their new environment. The program includes language classes that focus on practical communication skills, cultural nuances, and essential vocabulary for daily life for both the mother and the children' +
+                'Our job placement services are aimed at helping women find suitable employment opportunities that match their skills and experiences and consist of career counseling, resume building, interview preparation, and connections with local employers. Additionally, we offer assistance in securing safe and affordable housing, ensuring that families have a stable living environment.',
+            picture: 'GOALS:Ensure that participants gain proficiency in the local language for effective communication and integration.\n' +
+                'Assist women in finding employment that matches their skills and experiences.\n' +
+                'Help participants secure safe and affordable housing.\n' +
+                'Foster a sense of belonging and community among participants.',
         },
         {
-            project_name: 'HerLegalAid',
+            project_name: 'SheWorks',
             personName: 'Emma Rock',
-            short_description: 'To provide comprehensive legal support services to women, offering resources and access to legal professionals for issues such as workplace discrimination, domestic violence, and family law.',
-            description: 'HerLegalAid is a dedicated legal support service designed to assist women facing legal challenges. Our mission is to ensure that women have access to the legal resources and professional assistance they need to navigate complex legal issues effectively. By focusing on areas such as workplace discrimination, domestic violence, and family law, we aim to empower women to assert their rights and achieve justice.\n' +
-                'The main objectives are:\n' +
-                '1)Legal resources:\n' +
-                'Information Hub: A comprehensive online library with articles, guides, and FAQs on various legal topics, including workplace rights, domestic violence laws, and family law.\n' +
-                'Resource Database: A curated list of organizations, shelters, and support services available for women in need of legal and emotional support.\n' +
-                '2)Access to Legal Professionals:\n' +
-                'Consultations: Free or low-cost initial consultations with experienced lawyers specializing in relevant fields.\n' +
-                'Pro Bono Services: Partnerships with legal firms and professionals who offer pro bono (free) legal services for women unable to afford legal representation.\n' +
-                'Referral Network: A network of trusted legal professionals who can provide specialized support and representation in court.\n' +
-                'HerLegalAid collaborates with local organizations, shelters, and advocacy groups to extend our reach and impact. We work closely with community leaders to raise awareness about legal rights and available support services.\n' +
+            short_description: 'To provide new working opportunities to women',
+            description: 'SheWorks is an extensive initiative designed to help 200 women overcome the economic consequences of family maltreatment. Recognizing the barriers to employment and fair wages that these women face, the project offers comprehensive support to facilitate their reintegration into the workforce.' +
+                'Through internships, job placements, and targeted professional courses, SheWorks aims to enhance their skills, boost their confidence, and provide them with meaningful employment opportunities.' +
+                'The project includes structured training programs that cover a wide range of professional skills, from basic computer literacy to advanced vocational training. Participants will have access to mentorship and career counseling services to help them navigate their career paths effectively.' +
+                'Additionally, SheWorks collaborates with various industries to create internship and job opportunities tailored to the skills and interests of the women involved.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'pic 1',
+            picture: 'GOALS: Provide real-world work experience and job opportunities for women.\n' +
+                'Enhance the professional skills and employability of participants.\n' +
+                'Enable participants to achieve economic independence and fair wages.',
         },
         {
-            project_name: 'SheRaiseFund',
+            project_name: 'SheRaise',
             personName: 'Emma Rock',
-            short_description: 'To empower young women by providing financial support through a fundraising campaign focused on career development programs.',
-            description: 'SheRaise Fund is a dedicated fundraising initiative aimed at enhancing young women’s professional growth and career advancement. Our mission is to raise funds that will be directly invested in programs and services designed to support women\'s career development. By providing access to professional training, mentorship, and entrepreneurial resources, we aim to create a pathway for women to achieve their career goals and attain financial independence.' +
-                'The main objectives are:\n' +
-                '1)Professional Training\n' +
-                'Skills Workshops: Offering workshops in key areas such as leadership, communication, project management, and digital literacy to enhance professional skills and job readiness.\n' +
-                'Certification Programs: Funding for women to obtain certifications in various fields, increasing their qualifications and competitiveness in the job market.\n' +
-                'Industry-Specific Training: Specialized training programs tailored to high-demand industries such as technology, healthcare, finance, and creative arts.\n' +
-                '2)Mentorship and Networking\n' +
-                'Mentorship Programs: Pairing women with experienced mentors in their desired fields to provide guidance, support, and professional insights.\n' +
-                'Networking Events: Organizing events and seminars that facilitate networking opportunities with industry leaders and peers, fostering professional connections and career opportunities.\n' +
-                'Online Communities: Creating online platforms where women can connect, share resources, and support each other’s career development journeys.\n' +
-                '3)Entrepreneurship Support\n' +
-                'Business Planning Assistance: Providing resources and workshops on business planning, market analysis, and financial management for aspiring women entrepreneurs.\n' +
-                'Startup Grants: Offering grants to women starting their own businesses, helping them to cover initial costs and grow their ventures.\n' +
-                'Business Incubators: Partnering with business incubators to provide women entrepreneurs with workspace, mentorship, and access to funding opportunities.\n' +
-                'SheRaise Fund collaborates with local businesses, professional organizations, and community groups to maximize the impact of our fundraising efforts. We also engage volunteers and advocates to participate in fundraising events, mentorship programs, and advocacy initiatives.\n' +
+            short_description: 'To help young girls facing family problems with their education',
+            description: 'SheRaise is an impactful project designed to help 20 girls with challenging family backgrounds to achieve their educational goals. Recognizing the barriers these young women face, the project offers financial assistance to cover tuition fees, school supplies, books, and other educational expenses.' +
+                'This support extends through high school and into university, ensuring that financial constraints do not hinder their academic progress. In addition to financial aid, SheRaise provides access to tutors who offer personalized lessons and academic support.' +
+                'These tutors help the girls excel in their studies, offering guidance on subjects they find challenging and preparing them for exams. The project also addresses practical needs related to education, such as providing food tickets for meals near schools, assistance with transportation and affordable housing' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            picture: 'pic 1',
+            picture: 'GOALS: Ensure that financial barriers do not impede the educational progress of the girls.\n' +
+                'Enhance the academic performance and confidence of the participants.\n' +
+                'Support the overall well-being of the participants, ensuring a balanced and conducive environment for learning.',
         }
     ])
            
@@ -621,39 +662,48 @@ await Details.sync()
 if(await Details.count()===0)
     await Details.bulkCreate([
         {
-            project_name: 'NewHorizonForMom',
+            project_name: 'NewHorizonForMoms',
             target_people: 'New and single mothers',
             location: 'Milan',
             duration: '12/01/2022 to 31/12/2025',
-            partners: 'Esselunga'
+            partners: 'Esselunga, a leading supermarket chain, is a key partner in this initiative. They provide funding for the project, contribute to financial support for participants, and offer job opportunities within their company.' +
+                'Additionally, Esselunga supplies essential goods and services to participating families, helping to ensure that mothers and their children have access to nutritious food and other necessities.'
         },
         {
             project_name: 'NewSafeShelter',
             target_people: 'Mothers victim of domestic violence',
             location: 'Italy',
             duration: '12/01/2022 to 31/12/2025',
-            partners: 'Microsoft'
+            partners: 'Tecnocasa, a leading real estate network, is a key partner providing safe housing for the project.' +
+                'They offer secure accommodations and ensure that the living environment is suitable for the needs of the mothers and their children.' +
+                'Humanitas: Humanitas, a renowned organization specializing in mental health support, provides the counseling and psychological services essential for the recovery and well-being of the participants.' +
+                'Their professionals offer tailored support to help mothers and children heal from trauma and build a healthy future.'
         },
         {
-            project_name: 'SheWellness Newtwork',
-            target_people: 'Women 18+',
-            location: 'USA',
+            project_name: 'HerIntegration',
+            target_people: 'Foreign women 18+',
+            location: 'Italy',
             duration: '12/01/2022 to 31/12/2025',
-            partners: 'Walmart'
+            partners: 'Mazzeschi, a firm specializing in immigration and legal services, is a key partner in this initiative.\n' +
+                'They provide expert guidance on immigration matters, legal advice, and support with necessary documentation and processes.\n' +
+                'Mazzeschi’s involvement ensures that participants receive comprehensive assistance in navigating legal requirements and accessing resources.\n'
         },
         {
-            project_name: 'HerLegalAid',
+            project_name: 'SheWorks',
             target_people: 'Women 18+',
             location: 'Italy',
             duration: '01/01/2020 to 31/12/2030',
-            partners: 'Walmart'
+            partners: 'Kering, a global luxury group, is a key partner in the SheWorks initiative. The company supports the project by offering internships and job opportunities within its network of brands.' +
+                'Kering also contributes to the professional development programs by providing expertise, resources, and funding for training courses. This partnership leverages Kering’s commitment to social responsibility and women’s empowerment, helping to create a sustainable and impactful program that enables women to rebuild their lives and achieve economic independence.'
         },
         {
-            project_name: 'SheRaiseFund',
-            target_people: 'Women 18-25',
+            project_name: 'SheRaise',
+            target_people: 'Women 14-22',
             location: 'Milan',
             duration: '01/06/2024 to 01/06/2028',
-            partners: 'Comune di Milano'
+            partners: 'Politecnico di Milano, a  prestigious technical university in Italy, is a key partner in the SheRaise project. The university provides academic support and resources to enhance the educational experience of the participating girls.' +
+                'Politecnico di Milano offers access to its network of educators and tutors who provide personalized lessons and academic assistance, ensuring the girls receive the guidance they need to excel in their studies.' +
+                'Additionally, the university supports the project by facilitating workshops and educational programs that promote academic excellence and personal development.'
         },
     ])
            
