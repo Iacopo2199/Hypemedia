@@ -73,8 +73,8 @@ li{
 
 @media (min-width: 768px) {
   .button-73 {
-    font-size: 27px;
-    padding: .75rem 2rem;
+    font-size: 20px;
+    padding: .60rem 2rem;
   }
 }
 

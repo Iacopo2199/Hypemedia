@@ -64,7 +64,7 @@ span{
 .navbar {
 
 h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
-    font-size: 50px;              
+    font-size: 50px;
 }
 div{
     margin-left: auto;
@@ -76,7 +76,7 @@ div{
 li {
     float: left;
   }
-  
+
   li a {
     display: block;
     color: white;
@@ -84,7 +84,7 @@ li {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
   li a:hover {
     background-color: red;
   }

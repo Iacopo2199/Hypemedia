@@ -70,7 +70,7 @@ const Project = db.define('project', {
     },
     goals: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: false
     }
 },{
     createdAt: false,
@@ -475,60 +475,75 @@ if(await Service.count()===0)
     await Service.bulkCreate([
         {
             service_name: 'HerLegalAid',
-            personName: 'Emma Rock',
+            personName: 'Olivia Carter',
             short_description: 'Offering legal consultations, resources, and pro bono services to support women in legal matters.',
             description: 'Our dedicated legal aid services provide essential support for women facing legal challenges. We offer free or affordable initial consultations with experienced legal professionals who specialize in areas such as domestic violence, workplace discrimination, and family law.' +
                 'Our extensive online resource library includes guides and articles to help women understand their legal rights and navigate the complexities of the legal system.' +
                 'Additionally, we partner with law firms to provide pro bono legal services, ensuring that women who cannot afford representation still have access to justice.' +
                 'Through educational seminars, we inform women about their rights and the legal processes involved, empowering them to take informed actions. Our goal is to ensure that every woman has the legal support she needs to protect her rights and achieve fair outcomes.',
-            benefits: 'benefits1',
+            benefits: 'Expert Legal Consultations, Comprehensive Resources, Pro Bono Services, Educational Seminars, Affordable Initial Consultations',
             picture: 'picture1',
-            testimonials: 'testimonials1'
+            testimonials: 'Maria G.: "HerLegalAid gave me the confidence to stand up against workplace discrimination. Their support was invaluable."' +
+                'Lena P.: "The pro bono services provided through HerLegalAid helped me navigate a difficult divorce without financial burden."' +
+                'Aisha K.: "The online resources were incredibly helpful in understanding my rights and the legal steps I needed to take."' +
+                'Carla M.: "Attending their educational seminars empowered me to take control of my legal situation and seek justice."'
         },
         {
-            service_name: 'Healthier&Happier',
-            personName: 'Emma Rock',
+            service_name: 'LaVitaèBella',
+            personName: 'Amelia Phillips',
             short_description: 'Providing access to counseling, support groups, and wellness resources to promote mental well-being.',
             description: 'Our comprehensive mental health support service is designed to address the unique challenges women face. We offer individual and group counseling sessions with licensed therapists, providing a safe space for women to discuss issues such as anxiety, depression, and trauma.' +
                 'Additionally, we facilitate online support groups where women can share experiences and receive peer support for challenges like postpartum depression and anxiety.' +
                 'Our wellness resources include articles, videos, and workshops focused on stress management, mindfulness, and self-care techniques, empowering women to take control of their mental health and well-being.' +
                 'Through these services, we aim to foster a supportive community that encourages healing and personal growth.',
-            benefits: 'benefits1',
+            benefits: 'Licensed Therapy Sessions, Peer Support Groups, Wellness Resources, Safe and Confidential, Holistic Approach',
             picture: 'picture1',
-            testimonials: 'testimonials1'
+            testimonials: 'Jessica L.: "The counseling sessions through LaVitaèBella helped me manage my anxiety and gave me tools to cope."' +
+                'Sophia D.: "The online support group was a lifeline during my postpartum depression. Knowing I wasn’t alone made all the difference."' +
+                'Maya S.: "Their wellness workshops on mindfulness and self-care transformed my approach to handling stress."' +
+                'Rachel H.: "Being part of this supportive community has been empowering and healing for my mental health journey."'
         },
         {
             service_name: 'Work4Women',
-            personName: 'Emma Rock',
+            personName: 'Emily Wang',
             short_description: 'Enhancing women’s professional growth through training, mentorship, and networking opportunities.',
             description: 'Our career development programs are designed to empower women by providing the tools and resources they need to advance professionally.We offer a variety of skills workshops and courses on leadership, communication, digital literacy, and more, aimed at enhancing job readiness and competitiveness in the workforce.' +
                 'Through our mentorship programs, women are paired with experienced professionals in their fields who provide guidance, support, and valuable industry insights. Additionally, we organize networking events that create opportunities for women to connect with industry leaders and peers, fostering professional relationships and career opportunities.' +
                 'We also offer specialized resources for aspiring entrepreneurs, including business planning assistance and access to startup grants. Our comprehensive approach ensures that women have the support they need to achieve their career goals and attain financial independence.',
-            benefits: 'benefits1',
+            benefits: 'Professional Skills Development, Mentorship Programs, Networking Opportunities, Entrepreneurial Support, Career Advancement',
             picture: 'picture1',
-            testimonials: 'testimonials1'
+            testimonials: 'Lisa T.: "The mentorship program with Work4Women gave me the guidance I needed to navigate my career path successfully."' +
+                'Nina R.: "The skills workshops helped me improve my communication and leadership abilities, making me more competitive in the job market."' +
+                'Tara M.: "Networking events organized by Work4Women connected me with key industry players, leading to new career opportunities."' +
+                'Alisha K.: "The entrepreneurial resources provided me with the confidence and support to launch my own business."'
         },
         {
             service_name: 'HappyHousehold',
-            personName: 'Emma Rock',
+            personName: 'Sonia Kade',
             short_description: 'Offering guidance, resources, and support for women in their parenting journey.',
             description: 'Our parenting and family support services are designed to assist women in managing the demands of motherhood. We provide access to parenting classes, covering topics such as child development, discipline strategies, and effective communication. Support groups offer a space for mothers to share experiences and gain advice from peers.' +
                 'Additionally, we offer resources on balancing work and family life, including tips for managing time and stress. For single mothers or those facing unique challenges, our services include connections to childcare options, educational resources for children, and assistance with family-related legal matters.' +
                 'Our goal is to support women in creating healthy, nurturing environments for their families.',
-            benefits: 'benefits1',
+            benefits: 'Parenting Classes, Support Groups, Work-Life Balance Resources, Childcare and Educational Resources, Family Legal Assistance',
             picture: 'picture1',
-            testimonials: 'testimonials1'
+            testimonials: 'Anna J.: "HappyHousehold\'s parenting classes were a game-changer for me. I learned so much about effective discipline and communication."' +
+                'Briana S.: "The support group gave me a safe space to share my experiences and connect with other moms who understand my challenges."' +
+                'Dana M.: "Their resources on balancing work and family life helped me manage my time better and reduce stress."' +
+                'Elena P.: "As a single mother, the childcare and educational resources provided by HappyHousehold were invaluable. They made a huge difference in my family\'s life."'
         },
         {
             service_name: 'SheWellness',
-            personName: 'Emma Rock',
+            personName: 'Sophia Bennett',
             short_description: 'Promoting physical and mental well-being through health programs and community building.',
             description: 'Our health and wellness programs are tailored to support women’s overall well-being. We offer a range of virtual fitness classes, including yoga, pilates, and strength training, suitable for all fitness levels. Nutrition counseling services help women develop healthy eating habits and create personalized diet plans.' +
                 'Additionally, we provide resources on women\'s health issues, preventive care, and maintaining a balanced lifestyle. SheWellness focus on stress management, mindfulness, and self-care techniques. By promoting a holistic approach to health, we aim to help women lead healthier, more fulfilling lives.' +
                 'To foster a sense of community and mutual support, we facilitate online wellness forums and discussion groups where women can share their health journeys, tips, and encouragement. Regular health-focused events and social activities, both online and in-person, create opportunities for women to connect, support each other, and build lasting relationships.',
-            benefits: 'benefits1',
+            benefits: 'Virtual Fitness Classes, Nutrition Counseling, Health Resources, Stress Management and Self-Care, Community Building',
             picture: 'picture1',
-            testimonials: 'testimonials1'
+            testimonials: 'Grace W.: "The virtual fitness classes with SheWellness have transformed my routine and improved my physical health immensely."' +
+                'Ava C.: "Their nutrition counseling helped me develop a personalized diet plan that works perfectly for my lifestyle."' +
+                'Rachel B.: "The resources on stress management and self-care have been incredibly beneficial for my mental well-being."' +
+                'Mia K.: "I love the community aspect of SheWellness. The online forums and events have connected me with amazing, supportive women."'
         },
 
     ])
@@ -538,37 +553,61 @@ if(await Practical_info.count()===0)
     await Practical_info.bulkCreate([
         {
             service_name: 'HerLegalAid',
-            availability: 'avail1',
-            logistical_information: 'log_info1',
-            duration: '01/01/2020 to 31/12/2030',
+            availability: 'Monday to Friday, 9 to 17.',
+            logistical_information: 'Online consultations available nationwide. In-person consultations available only in Lombardia\n' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Seminar Schedule: Monthly seminars held online; in-person seminars available quarterly in major cities in Lombardia.\n' +
+                'Appointment Booking: Appointments can be booked through our website or by calling our office during business hours.',
+            duration: '01/01/2020 to 31/12/2029',
             location: 'Italy',
         },
         {
-            service_name: 'Healthier&Happier',
-            availability: 'avail1',
-            logistical_information: 'log_info1',
-            duration: '01/01/2020 to 31/12/2030',
+            service_name: 'LaVitaèBella',
+            availability: 'Monday to Friday, 8 to 18; Saturday, 10 to 16.',
+            logistical_information: 'Virtual sessions available nationwide. In-person sessions available at at centers in Lombardia.' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Workshop Schedule: Monthly workshops held online; quarterly in-person workshops in various locations in Lombardia.\n' +
+                'Appointment Booking: Appointments can be booked through our website or by calling our office during business hours.',
+            duration: '01/01/2023 to 31/12/2032',
             location: 'Italy',
         },
         {
             service_name: 'Work4Women',
-            availability: 'avail1',
-            logistical_information: 'log_info1',
-            duration: '01/01/2020 to 31/12/2030',
+            availability: 'Monday to Friday, 9 to 18; Saturday, 10 to 14.',
+            logistical_information: 'Online courses available globally. In-person workshops available in major cities in Lombardia.' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Mentorship Program: Ongoing enrollment with virtual and in-person meetings.\n' +
+                'Networking Events: Quarterly events held both online and in various locations.\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Course Schedule: Detailed schedule available on our website with options for weekday and weekend sessions.\n' +
+                'Enrollment: Sign up for programs and events through our website or contact our office during business hours.',
+            duration: '01/01/2016 to 31/12/2025',
             location: 'Italy',
         },
         {
             service_name: 'HappyHousehold',
-            availability: 'avail1',
-            logistical_information: 'log_info1',
-            duration: '01/01/2020 to 31/12/2030',
+            availability: 'Monday to Friday, 9 to 7; Saturday, 10 to 15.',
+            logistical_information: ' Online classes and support groups available nationwide. In-person sessions available in Milano, Bergamo and Brescia.' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Support Groups: Weekly online and in-person meetings.\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Class Schedule: Detailed schedule available on our website with weekday and weekend options.\n' +
+                'Enrollment: Sign up for classes and support groups through our website or contact our office during business hours.',
+            duration: '01/01/2020 to 31/12/2029',
             location: 'Italy',
         },
         {
             service_name: 'SheWellness',
-            availability: 'avail1',
-            logistical_information: 'log_info1',
-            duration: '01/01/2020 to 31/12/2030',
+            availability: 'Monday to Friday, 6 to 20; Saturday, 8 to 16; Sunday, 10 to 14',
+            logistical_information: 'Virtual classes and events available globally. In-person activities available in Milan, Bergamo and Brescia.' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Discussion Groups: Ongoing online forums and bi-weekly discussion group meetings.\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Event Schedule: Regular events and activities scheduled monthly; detailed schedule available on our website.\n' +
+                'Enrollment: Sign up for programs and events through our website or contact our office during business hours.',
+            duration: '01/01/2021 to 31/12/2030',
             location: 'Italy',
         }
     ])
@@ -593,8 +632,8 @@ if(await Project.count()===0)
     await Project.bulkCreate([
         {
             project_name: 'NewHorizonForMoms',
-            personName: 'Emma Rock',
-            short_description: 'To provide comprehensive support to new and single mothers.',
+            personName: 'Isabella Morgan',
+            short_description: 'To provide resources, knowledge, and community connections necessary for effective parenting to new and single mothers, .',
             description: 'NewHorizonsForMoms is an innovative project designed to assist 30 single and new mothers in overcoming the challenges they face.' +
                 'Participating mothers will benefit from personalized parenting workshops that cover essential topics such as child development, nutrition, and effective communication.' +
                 'We also facilitate access to affordable childcare services, allowing mothers to pursue education or employment opportunities.' +
@@ -611,8 +650,8 @@ if(await Project.count()===0)
         },
         {
             project_name: 'NewSafeShelter',
-            personName: 'Matteo Huang',
-            short_description: 'To help mothers who are victims of domestic violence in rebuilding their life',
+            personName: 'Emma Rock',
+            short_description: 'To provide safe, supportive, and transitional housing for mothers who are victims of domestic violence, helping them to rebuild their lives.',
             description: 'NewSafeShelter is a project designed to assist mothers escaping domestic violence in rebuilding their lives. We offer safe and stable housing for a period of two years, ensuring that women and their children have a secure place to live as they recover and regain their independence.' +
                 'The project provides comprehensive counseling and psychological support services to address the trauma experienced by both the mothers and their children.' +
                 'In addition to housing and psychological support, NewSafeShelter aims to empower mothers through various resources and programs that foster personal and professional growth.' +
@@ -626,8 +665,8 @@ if(await Project.count()===0)
         },
         {
             project_name: 'HerIntegration',
-            personName: 'Anastasia Favero',
-            short_description: 'To help foreign mothers integrate in Italy',
+            personName: 'Noelle Brooks',
+            short_description: 'To facilitate the integration of foreign mothers and their family into the community and promote their independence and well-being.',
             description: 'HerIntegration is a comprehensive project designed to assist 20 foreign women and their children in successfully integrating into their new community.' +
                 'Recognizing the challenges faced by immigrants, we provide tailored language education programs that cater to different proficiency levels, ensuring that participants can effectively communicate and navigate their new environment. The program includes language classes that focus on practical communication skills, cultural nuances, and essential vocabulary for daily life for both the mother and the children' +
                 'Our job placement services are aimed at helping women find suitable employment opportunities that match their skills and experiences and consist of career counseling, resume building, interview preparation, and connections with local employers. Additionally, we offer assistance in securing safe and affordable housing, ensuring that families have a stable living environment.',
@@ -639,8 +678,8 @@ if(await Project.count()===0)
         },
         {
             project_name: 'SheWorks',
-            personName: 'Emma Rock',
-            short_description: 'To provide new working opportunities to women',
+            personName: 'Emily Wang',
+            short_description: 'To empower maltreated women by providing internships, job opportunities, professional courses, and training programs, enabling them to achieve economic independence and career advancement.',
             description: 'SheWorks is an extensive initiative designed to help 200 women overcome the economic consequences of family maltreatment. Recognizing the barriers to employment and fair wages that these women face, the project offers comprehensive support to facilitate their reintegration into the workforce.' +
                 'Through internships, job placements, and targeted professional courses, SheWorks aims to enhance their skills, boost their confidence, and provide them with meaningful employment opportunities.' +
                 'The project includes structured training programs that cover a wide range of professional skills, from basic computer literacy to advanced vocational training. Participants will have access to mentorship and career counseling services to help them navigate their career paths effectively.' +
@@ -653,8 +692,8 @@ if(await Project.count()===0)
         },
         {
             project_name: 'SheRaise',
-            personName: 'Emma Rock',
-            short_description: 'To help young girls facing family problems with their education',
+            personName: 'Sonia Kade',
+            short_description: 'To provide comprehensive assistance to young women with family problems in order to ensure their education through high school and university.',
             description: 'SheRaise is an impactful project designed to help 20 girls with challenging family backgrounds to achieve their educational goals. Recognizing the barriers these young women face, the project offers financial assistance to cover tuition fees, school supplies, books, and other educational expenses.' +
                 'This support extends through high school and into university, ensuring that financial constraints do not hinder their academic progress. In addition to financial aid, SheRaise provides access to tutors who offer personalized lessons and academic support.' +
                 'These tutors help the girls excel in their studies, offering guidance on subjects they find challenging and preparing them for exams. The project also addresses practical needs related to education, such as providing food tickets for meals near schools, assistance with transportation and affordable housing' +
@@ -673,7 +712,7 @@ if(await Details.count()===0)
         {
             project_name: 'NewHorizonForMoms',
             target_people: 'New and single mothers',
-            location: 'Milan',
+            location: 'Milan, Italy',
             duration: '12/01/2022 to 31/12/2025',
             partners: 'Esselunga, a leading supermarket chain, is a key partner in this initiative. They provide funding for the project, contribute to financial support for participants, and offer job opportunities within their company.' +
                 'Additionally, Esselunga supplies essential goods and services to participating families, helping to ensure that mothers and their children have access to nutritious food and other necessities.'
@@ -681,8 +720,8 @@ if(await Details.count()===0)
         {
             project_name: 'NewSafeShelter',
             target_people: 'Mothers victim of domestic violence',
-            location: 'Italy',
-            duration: '12/01/2022 to 31/12/2025',
+            location: 'Bergamo, Italy',
+            duration: '01/01/2024 to 31/12/2025',
             partners: 'Tecnocasa, a leading real estate network, is a key partner providing safe housing for the project.' +
                 'They offer secure accommodations and ensure that the living environment is suitable for the needs of the mothers and their children.' +
                 'Humanitas: Humanitas, a renowned organization specializing in mental health support, provides the counseling and psychological services essential for the recovery and well-being of the participants.' +
@@ -691,8 +730,8 @@ if(await Details.count()===0)
         {
             project_name: 'HerIntegration',
             target_people: 'Foreign women 18+',
-            location: 'Italy',
-            duration: '12/01/2022 to 31/12/2025',
+            location: 'Milan, Italy',
+            duration: '01/05/2023 to 31/12/2024',
             partners: 'Mazzeschi, a firm specializing in immigration and legal services, is a key partner in this initiative.\n' +
                 'They provide expert guidance on immigration matters, legal advice, and support with necessary documentation and processes.\n' +
                 'Mazzeschi’s involvement ensures that participants receive comprehensive assistance in navigating legal requirements and accessing resources.\n'
