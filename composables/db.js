@@ -652,7 +652,7 @@ if(await Project.count()===0)
             project_name: 'NewSafeShelter',
             personName: 'Emma Rock',
             short_description: 'To provide safe, supportive, and transitional housing for mothers who are victims of domestic violence, helping them to rebuild their lives.',
-            description: 'NewSafeShelter is a project designed to assist mothers escaping domestic violence in rebuilding their lives. We offer safe and stable housing for a period of two years, ensuring that women and their children have a secure place to live as they recover and regain their independence.' +
+            description: 'NewSafeShelter is a project designed to assist 10 mothers escaping domestic violence in rebuilding their lives. We offer safe and stable housing for a period of two years, ensuring that women and their children have a secure place to live as they recover and regain their independence.' +
                 'The project provides comprehensive counseling and psychological support services to address the trauma experienced by both the mothers and their children.' +
                 'In addition to housing and psychological support, NewSafeShelter aims to empower mothers through various resources and programs that foster personal and professional growth.' +
                 'We offer workshops on life skills, financial literacy, and job readiness, helping mothers to build the skills necessary for long-term self-sufficiency. By creating a safe, supportive environment, NewSafeShelter enables mothers to heal, rebuild their confidence, and create a stable future for themselves and their children.' +
@@ -691,10 +691,10 @@ if(await Project.count()===0)
             picture: 'pic',
         },
         {
-            project_name: 'SheRaise',
+            project_name: 'Girls&Growth',
             personName: 'Sonia Kade',
             short_description: 'To provide comprehensive assistance to young women with family problems in order to ensure their education through high school and university.',
-            description: 'SheRaise is an impactful project designed to help 20 girls with challenging family backgrounds to achieve their educational goals. Recognizing the barriers these young women face, the project offers financial assistance to cover tuition fees, school supplies, books, and other educational expenses.' +
+            description: 'Girls&Growth is an impactful project designed to help 20 girls with challenging family backgrounds to achieve their educational goals. Recognizing the barriers these young women face, the project offers financial assistance to cover tuition fees, school supplies, books, and other educational expenses.' +
                 'This support extends through high school and into university, ensuring that financial constraints do not hinder their academic progress. In addition to financial aid, SheRaise provides access to tutors who offer personalized lessons and academic support.' +
                 'These tutors help the girls excel in their studies, offering guidance on subjects they find challenging and preparing them for exams. The project also addresses practical needs related to education, such as providing food tickets for meals near schools, assistance with transportation and affordable housing' +
                 'For more information or to get involved, please contact us at 1234567890.',
@@ -745,11 +745,11 @@ if(await Details.count()===0)
                 'Kering also contributes to the professional development programs by providing expertise, resources, and funding for training courses. This partnership leverages Kering’s commitment to social responsibility and women’s empowerment, helping to create a sustainable and impactful program that enables women to rebuild their lives and achieve economic independence.'
         },
         {
-            project_name: 'SheRaise',
+            project_name: 'Girls&Growth',
             target_people: 'Women 14-22',
             location: 'Milan',
             duration: '01/06/2024 to 01/06/2028',
-            partners: 'Politecnico di Milano, a  prestigious technical university in Italy, is a key partner in the SheRaise project. The university provides academic support and resources to enhance the educational experience of the participating girls.' +
+            partners: 'Politecnico di Milano, a  prestigious technical university in Italy, is a key partner in the Girls&Growth project. The university provides academic support and resources to enhance the educational experience of the participating girls.' +
                 'Politecnico di Milano offers access to its network of educators and tutors who provide personalized lessons and academic assistance, ensuring the girls receive the guidance they need to excel in their studies.' +
                 'Additionally, the university supports the project by facilitating workshops and educational programs that promote academic excellence and personal development.'
         },
