@@ -482,7 +482,7 @@ if(await Service.count()===0)
                 'Additionally, we partner with law firms to provide pro bono legal services, ensuring that women who cannot afford representation still have access to justice.' +
                 'Through educational seminars, we inform women about their rights and the legal processes involved, empowering them to take informed actions. Our goal is to ensure that every woman has the legal support she needs to protect her rights and achieve fair outcomes.',
             benefits: 'Expert Legal Consultations, Comprehensive Resources, Pro Bono Services, Educational Seminars, Affordable Initial Consultations',
-            picture: 'picture1',
+            picture: '/_nuxt/assets/img/women/w6.jpeg',
             testimonials: 'Maria G.: "HerLegalAid gave me the confidence to stand up against workplace discrimination. Their support was invaluable."' +
                 'Lena P.: "The pro bono services provided through HerLegalAid helped me navigate a difficult divorce without financial burden."' +
                 'Aisha K.: "The online resources were incredibly helpful in understanding my rights and the legal steps I needed to take."' +
@@ -497,7 +497,7 @@ if(await Service.count()===0)
                 'Our wellness resources include articles, videos, and workshops focused on stress management, mindfulness, and self-care techniques, empowering women to take control of their mental health and well-being.' +
                 'Through these services, we aim to foster a supportive community that encourages healing and personal growth.',
             benefits: 'Licensed Therapy Sessions, Peer Support Groups, Wellness Resources, Safe and Confidential, Holistic Approach',
-            picture: 'picture1',
+            picture: '/_nuxt/assets/img/women/w7.png',
             testimonials: 'Jessica L.: "The counseling sessions through LaVitaèBella helped me manage my anxiety and gave me tools to cope."' +
                 'Sophia D.: "The online support group was a lifeline during my postpartum depression. Knowing I wasn’t alone made all the difference."' +
                 'Maya S.: "Their wellness workshops on mindfulness and self-care transformed my approach to handling stress."' +
@@ -511,7 +511,7 @@ if(await Service.count()===0)
                 'Through our mentorship programs, women are paired with experienced professionals in their fields who provide guidance, support, and valuable industry insights. Additionally, we organize networking events that create opportunities for women to connect with industry leaders and peers, fostering professional relationships and career opportunities.' +
                 'We also offer specialized resources for aspiring entrepreneurs, including business planning assistance and access to startup grants. Our comprehensive approach ensures that women have the support they need to achieve their career goals and attain financial independence.',
             benefits: 'Professional Skills Development, Mentorship Programs, Networking Opportunities, Entrepreneurial Support, Career Advancement',
-            picture: 'picture1',
+            picture: '/_nuxt/assets/img/women/w8.jpeg',
             testimonials: 'Lisa T.: "The mentorship program with Work4Women gave me the guidance I needed to navigate my career path successfully."' +
                 'Nina R.: "The skills workshops helped me improve my communication and leadership abilities, making me more competitive in the job market."' +
                 'Tara M.: "Networking events organized by Work4Women connected me with key industry players, leading to new career opportunities."' +
@@ -525,7 +525,7 @@ if(await Service.count()===0)
                 'Additionally, we offer resources on balancing work and family life, including tips for managing time and stress. For single mothers or those facing unique challenges, our services include connections to childcare options, educational resources for children, and assistance with family-related legal matters.' +
                 'Our goal is to support women in creating healthy, nurturing environments for their families.',
             benefits: 'Parenting Classes, Support Groups, Work-Life Balance Resources, Childcare and Educational Resources, Family Legal Assistance',
-            picture: 'picture1',
+            picture: '/_nuxt/assets/img/women/w9.webp',
             testimonials: 'Anna J.: "HappyHousehold\'s parenting classes were a game-changer for me. I learned so much about effective discipline and communication."' +
                 'Briana S.: "The support group gave me a safe space to share my experiences and connect with other moms who understand my challenges."' +
                 'Dana M.: "Their resources on balancing work and family life helped me manage my time better and reduce stress."' +
@@ -539,7 +539,7 @@ if(await Service.count()===0)
                 'Additionally, we provide resources on women\'s health issues, preventive care, and maintaining a balanced lifestyle. SheWellness focus on stress management, mindfulness, and self-care techniques. By promoting a holistic approach to health, we aim to help women lead healthier, more fulfilling lives.' +
                 'To foster a sense of community and mutual support, we facilitate online wellness forums and discussion groups where women can share their health journeys, tips, and encouragement. Regular health-focused events and social activities, both online and in-person, create opportunities for women to connect, support each other, and build lasting relationships.',
             benefits: 'Virtual Fitness Classes, Nutrition Counseling, Health Resources, Stress Management and Self-Care, Community Building',
-            picture: 'picture1',
+            picture: '/_nuxt/assets/img/women/w10.jpeg',
             testimonials: 'Grace W.: "The virtual fitness classes with SheWellness have transformed my routine and improved my physical health immensely."' +
                 'Ava C.: "Their nutrition counseling helped me develop a personalized diet plan that works perfectly for my lifestyle."' +
                 'Rachel B.: "The resources on stress management and self-care have been incredibly beneficial for my mental well-being."' +
@@ -633,7 +633,7 @@ if(await Project.count()===0)
         {
             project_name: 'NewHorizonForMoms',
             personName: 'Isabella Morgan',
-            short_description: 'To provide resources, knowledge, and community connections necessary for effective parenting to new and single mothers, .',
+            short_description: 'To provide resources, knowledge, and community connections necessary for effective parenting to new and single mothers.',
             description: 'NewHorizonsForMoms is an innovative project designed to assist 30 single and new mothers in overcoming the challenges they face.' +
                 'Participating mothers will benefit from personalized parenting workshops that cover essential topics such as child development, nutrition, and effective communication.' +
                 'We also facilitate access to affordable childcare services, allowing mothers to pursue education or employment opportunities.' +
@@ -641,12 +641,12 @@ if(await Project.count()===0)
                 'Our job assistance program includes career counseling, resume building, and job placement services, ensuring that each mother has the opportunity to achieve professional success.' +
                 'By fostering a supportive network and leveraging community resources, NewHorizonsForMoms is committed to helping mothers achieve independence and security.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            goals: 'GOALS: Enhance the parenting skills and confidence of 20 single and new mothers.\n' +
+            goals: 'Enhance the parenting skills and confidence of 20 single and new mothers.\n' +
                 'Ensure that participating mothers have access to reliable and affordable childcare.\n' +
                 'Alleviate the economic stress experienced by single and new mothers.\n' +
                 'Support mothers in finding and securing stable employment.\n' +
                 'Foster a supportive community among participating mothers.',
-            picture: 'pic',
+            picture: '/_nuxt/assets/img/women/w1.jpeg',
         },
         {
             project_name: 'NewSafeShelter',
@@ -657,11 +657,11 @@ if(await Project.count()===0)
                 'In addition to housing and psychological support, NewSafeShelter aims to empower mothers through various resources and programs that foster personal and professional growth.' +
                 'We offer workshops on life skills, financial literacy, and job readiness, helping mothers to build the skills necessary for long-term self-sufficiency. By creating a safe, supportive environment, NewSafeShelter enables mothers to heal, rebuild their confidence, and create a stable future for themselves and their children.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            goals: 'GOALS: Provide a secure and stable living environment for mothers and their children escaping domestic violence.\n' +
+            goals: 'Provide a secure and stable living environment for mothers and their children escaping domestic violence.\n' +
                 'Address the psychological and emotional needs of mothers and their children who have experienced domestic violence.\n' +
                 'Empower mothers with the skills needed for independence and self-sufficiency.\n' +
                 'Foster a supportive community where mothers can share experiences and support each other.',
-            picture: 'pic',
+            picture: '/_nuxt/assets/img/women/w2.jpeg',
         },
         {
             project_name: 'HerIntegration',
@@ -670,11 +670,11 @@ if(await Project.count()===0)
             description: 'HerIntegration is a comprehensive project designed to assist 20 foreign women and their children in successfully integrating into their new community.' +
                 'Recognizing the challenges faced by immigrants, we provide tailored language education programs that cater to different proficiency levels, ensuring that participants can effectively communicate and navigate their new environment. The program includes language classes that focus on practical communication skills, cultural nuances, and essential vocabulary for daily life for both the mother and the children' +
                 'Our job placement services are aimed at helping women find suitable employment opportunities that match their skills and experiences and consist of career counseling, resume building, interview preparation, and connections with local employers. Additionally, we offer assistance in securing safe and affordable housing, ensuring that families have a stable living environment.',
-            goals: 'GOALS:Ensure that participants gain proficiency in the local language for effective communication and integration.\n' +
+            goals: 'Ensure that participants gain proficiency in the local language for effective communication and integration.\n' +
                 'Assist women in finding employment that matches their skills and experiences.\n' +
                 'Help participants secure safe and affordable housing.\n' +
                 'Foster a sense of belonging and community among participants.',
-            picture: 'pic',
+            picture: '/_nuxt/assets/img/women/w3.jpeg',
         },
         {
             project_name: 'SheWorks',
@@ -685,10 +685,10 @@ if(await Project.count()===0)
                 'The project includes structured training programs that cover a wide range of professional skills, from basic computer literacy to advanced vocational training. Participants will have access to mentorship and career counseling services to help them navigate their career paths effectively.' +
                 'Additionally, SheWorks collaborates with various industries to create internship and job opportunities tailored to the skills and interests of the women involved.' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            goals: 'GOALS: Provide real-world work experience and job opportunities for women.\n' +
+            goals: 'Provide real-world work experience and job opportunities for women.\n' +
                 'Enhance the professional skills and employability of participants.\n' +
                 'Enable participants to achieve economic independence and fair wages.',
-            picture: 'pic',
+            picture: '/_nuxt/assets/img/women/w4.jpeg',
         },
         {
             project_name: 'Girls&Growth',
@@ -698,10 +698,10 @@ if(await Project.count()===0)
                 'This support extends through high school and into university, ensuring that financial constraints do not hinder their academic progress. In addition to financial aid, SheRaise provides access to tutors who offer personalized lessons and academic support.' +
                 'These tutors help the girls excel in their studies, offering guidance on subjects they find challenging and preparing them for exams. The project also addresses practical needs related to education, such as providing food tickets for meals near schools, assistance with transportation and affordable housing' +
                 'For more information or to get involved, please contact us at 1234567890.',
-            goals: 'GOALS: Ensure that financial barriers do not impede the educational progress of the girls.\n' +
+            goals: 'Ensure that financial barriers do not impede the educational progress of the girls.\n' +
                 'Enhance the academic performance and confidence of the participants.\n' +
                 'Support the overall well-being of the participants, ensuring a balanced and conducive environment for learning.',
-            picture: 'pic',
+            picture: '/_nuxt/assets/img/women/w5.png',
         }
     ])
            

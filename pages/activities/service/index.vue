@@ -32,6 +32,8 @@ useHead({
     <span v-for="s in service">
     <b><h1 class="w3-container w3-center w3-padding-32">{{ s.service_name }}</h1></b>
 
+    <b><h1 class="w3-container w3-center w3-padding-32"><img :src="s.picture"></h1></b>
+
     <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: <NuxtLink to="/people/person">
         <button @click="store_people.get_person(s.personName)" class="button-73">
           {{ s.personName }}
@@ -52,6 +54,12 @@ useHead({
 </template>
 
 <style scoped>
+
+img {
+width: auto;
+height: 300px;
+}
+
 div{
     margin-left: auto;
     margin-right: auto;

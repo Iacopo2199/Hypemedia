@@ -33,7 +33,7 @@ useHead({
     <span v-for="p in project">
       <b><h1 class="w3-container w3-center w3-padding-32">{{ p.project_name }}</h1></b>
 
-      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.picture }}</h1></b>
+      <b><h1 class="w3-container w3-center w3-padding-32"><img :src="p.picture"></h1></b>
 
       <b><h1 id="goals" class="w3-container w3-center w3-padding-32">Goals</h1></b>
       <div>{{ p.goals }}</div>
@@ -59,6 +59,11 @@ useHead({
 </template>
 
 <style scoped>
+
+img {
+width: auto;
+height: 300px;
+}
 
 div{
     margin-left: auto;
