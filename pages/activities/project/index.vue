@@ -25,6 +25,7 @@ useHead({
     
 
     <NavBarComponent class="navbar">
+      <li><a href="#goals">Goals</a></li>
       <li><a href="#description">Description</a></li>
     </NavBarComponent>
 
@@ -34,7 +35,8 @@ useHead({
 
       <b><h1 class="w3-container w3-center w3-padding-32">{{ p.picture }}</h1></b>
 
-      <b><h1 class="w3-container w3-center w3-padding-32">{{ p.goals }}</h1></b>
+      <b><h1 id="goals" class="w3-container w3-center w3-padding-32">Goals</h1></b>
+      <div>{{ p.goals }}</div>
 
       <b><h1 class="w3-container w3-center w3-padding-32">Person in charge: <NuxtLink to="/people/person">
         <button @click="store_people.get_person(p.personName)" class="button-73">
@@ -57,6 +59,13 @@ useHead({
 </template>
 
 <style scoped>
+
+div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 20px;
+}
 span{
     text-align: center;
 }
@@ -64,29 +73,23 @@ span{
 .navbar {
 
 h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
-    font-size: 50px;
-}
-div{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    font-size: 20px;
+    font-size: 50px;              
 }
 
 li {
     float: left;
   }
-
+  
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-
+  
   li a:hover {
-    background-color: red;
+    background-color: #0BC3A9;
   }
 }
 
@@ -116,8 +119,8 @@ li {
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

@@ -17,15 +17,16 @@ useHead({
 </script>
 
 <template>
-    <div>
-      <h1>Our projects</h1>
-    </div>
+    
 
     <ul>
+      <p></p>
       <li v-for="p in project"> 
         <button @click="store.get_project(p.project_name)" class="button-73"><NuxtLink to="/activities/project">{{ p.project_name }} - {{ p.short_description}}</NuxtLink></button>
+        <p></p>
       </li>
     </ul>
+
 
 </template>
 
@@ -62,8 +63,8 @@ li{
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 
@@ -73,8 +74,9 @@ li{
 
 @media (min-width: 768px) {
   .button-73 {
-    font-size: 20px;
-    padding: .60rem 2rem;
+    width: 1000px;
+    font-size: 19px;
+    padding: 0.6px 100px;
   }
 }
 

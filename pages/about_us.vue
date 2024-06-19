@@ -79,14 +79,14 @@ li {
   
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: red;
+    background-color: #0BC3A9;
   }
 }
 </style>

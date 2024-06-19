@@ -52,6 +52,13 @@ useHead({
 </template>
 
 <style scoped>
+div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 20px;
+}
+
 span{
     text-align: center;
 }
@@ -61,12 +68,6 @@ span{
 h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
     font-size: 50px;              
 }
-div{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    font-size: 20px;
-}
 
 li {
     float: left;
@@ -74,14 +75,14 @@ li {
   
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: red;
+    background-color: #0BC3A9;
   }
 }
 
@@ -111,8 +112,8 @@ li {
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

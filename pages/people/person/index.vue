@@ -128,8 +128,8 @@ height: 300px;
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 
@@ -163,14 +163,14 @@ li {
   
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: red;
+    background-color: #0BC3A9;
   }
 }
 

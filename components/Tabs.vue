@@ -10,10 +10,13 @@
         {{ tab.name }}
       </button>
     </div>
+    <p></p>
+    <p></p>
     <div class="tab-content">
       <component :is="currentTabComponent" v-if="currentTabComponent"></component>
     </div>
   </div>
+  <br>
 </template>
 
 <script>
@@ -66,8 +69,7 @@ button {
 }
 
 button.active {
-  background-color: #007bff;
-  color: white;
+  background-color: #0BC3A9;
 }
 
 .tab-content {

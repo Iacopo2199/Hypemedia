@@ -47,6 +47,12 @@ useHead({
 </template>
 
 <style scoped>
+div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 20px;
+}
 
 span{
   text-align: center;
@@ -57,12 +63,6 @@ span{
 h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif;
     font-size: 50px;              
 }
-div{
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    font-size: 20px;
-}
 
 li {
     float: left;
@@ -70,14 +70,14 @@ li {
   
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: red;
+    background-color: #0BC3A9;
   }
 }
 

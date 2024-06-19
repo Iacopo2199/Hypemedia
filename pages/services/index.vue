@@ -18,13 +18,10 @@ useHead({
 
 <template>
     
-    <div>
-      <h1>Our services</h1>
-    </div>
-
     <ul>
       <li v-for="s in service"> 
         <button @click="store.get_service(s.service_name)" class="button-73"><NuxtLink to="/activities/service">{{ s.service_name }} - {{ s.short_description}}</NuxtLink></button>
+      <p></p>
       </li>
     </ul>
 
@@ -63,8 +60,8 @@ li{
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

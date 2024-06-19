@@ -10,10 +10,10 @@
 
   <header>
     <NuxtLink to="/">
-    <h1><img src="~/assets/img/logo.png" width="50%"></h1>
+    <h1><img src="~/assets/img/logo.png" width="75%"></h1>
   </NuxtLink>
     <nav>
-      <button class="btn" onclick="history.back()"><img src="~/assets/img/backarrow.svg" width="30%"></button>
+      <button class="btn" onclick="history.back()"><img src="~/assets/img/backarrow.svg"></button>
       <NuxtLink to="/about_us">ABOUT US</NuxtLink>
       <NuxtLink to="/people">ALL PEOPLE</NuxtLink>
       <NuxtLink to="/activities">ALL ACTIVITIES</NuxtLink>
@@ -62,32 +62,24 @@ header
 
 nav {
   display: flex;
-  gap: 40px;
+  gap: 70px;
 }
 
 nav a {
-  font-size: 21pt;
+  font-size: 22pt;
   font-weight: bold;
 }
 
 .btn {
-  background: black;
-  background-image: linear-gradient(to bottom, #d93434, #330101);
+  background-image: linear-gradient(to bottom, white);
   border-radius: 28px;
   color: #ffffff;
-  font-size: 5px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  max-width: 70%;
-  height: 70%;
-  margin-left: 10px;
-  margin-top: 10px;
-  align-self: flex-start;
+  width: 80px;
 }
 
 .btn:hover {
-  background: #ff0000;
-  background-image: linear-gradient(to bottom, #c51818, #c51818);
+  background: white;
+  background-image: linear-gradient(to bottom, rgba(197, 177, 177, 0.826));
   text-decoration: none;
 }
 

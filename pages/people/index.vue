@@ -22,7 +22,6 @@ useHead({
     <span style="text-align: center;">
     <div>
       <h1>Our people</h1>
-      <h4>This is the list of our people</h4>
     </div>
     
     <ul>
@@ -81,8 +80,8 @@ li{
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

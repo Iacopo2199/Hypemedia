@@ -40,7 +40,7 @@ height: auto;
 .div {
   background-color: lightgrey;
   width: 700px;
-  border: 20px solid orange;
+  border: 20px solid #0BC3A9;
   padding: 50px;
   margin: 50px;
   text-align: center;
@@ -77,8 +77,8 @@ div{
 }
 
 .button-73:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+  background-color: #0BC3A9;
+  box-shadow: #04443b 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

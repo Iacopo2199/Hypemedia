@@ -55,7 +55,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  border: 2px rgb(255, 102, 0) dashed;
+  border: 2px #0BC3A9 dashed;
   border-radius: 5px;
   row-gap: 20px;
 }
