@@ -545,6 +545,18 @@ if(await Service.count()===0)
                 'Rachel B.: "The resources on stress management and self-care have been incredibly beneficial for my mental well-being."' +
                 'Mia K.: "I love the community aspect of SheWellness. The online forums and events have connected me with amazing, supportive women."'
         },
+        {
+            service_name: 'WomenAssist',
+            personName: 'Ava Reed',
+            short_description: 'WomenAssist is a dedicated service aimed at providing comprehensive support and assistance to women in various aspects of their lives.',
+            description: 'Our mission is to empower women by offering resources, guidance, and opportunities that enhance their personal and professional growth. WomenAssist is committed to fostering a supportive community where women can access the help they need to overcome challenges and achieve their goals.',
+            benefits: 'Educational Support, Economic Empowerment, Health and Well-being, Legal and Social Support',
+            picture: '/_nuxt/assets/img/women/w12.webp',
+            testimonials: 'Maria S.: "WomenAssist has been a game-changer for me. The financial literacy workshops helped me start my own business, and the support network has been invaluable."' +
+                'Aisha K.: "Thanks to the educational resources provided by WomenAssist, I was able to complete my degree and secure a job in my dream field. The mentorship program was particularly helpful."' +
+                'Emily R.: "WomenAssist s legal aid services helped me navigate a difficult situation and get the justice I deserved. I am so grateful for their support and advocacy."' +
+                'Sofia M.: "Participating in the leadership training program at WomenAssist empowered me to run for local office. The encouragement and resources provided made all the difference in my campaign."'
+        },
 
     ])
     
@@ -609,6 +621,18 @@ if(await Practical_info.count()===0)
                 'Enrollment: Sign up for programs and events through our website or contact our office during business hours.',
             duration: '01/01/2021 to 31/12/2030',
             location: 'Italy',
+        },
+        {
+            service_name: 'WomenAssist',
+            availability: 'Monday to Friday, 6 to 18; Saturday, 8 to 16',
+            logistical_information: 'Virtual classes and events available globally. In-person activities available in Milan, Bergamo and Brescia.' +
+                'Contact Information: Email: support@betterfuture.org | Phone: 0444123456\n' +
+                'Discussion Groups: Ongoing online forums and bi-weekly discussion group meetings.\n' +
+                'Resource Library: Accessible 24/7 on our website.\n' +
+                'Event Schedule: Regular events and activities scheduled monthly; detailed schedule available on our website.\n' +
+                'Enrollment: Sign up for programs and events through our website or contact our office during business hours.',
+            duration: '01/01/2021 to 31/12/2030',
+            location: 'Italy',
         }
     ])
      
@@ -620,7 +644,7 @@ if(await Center.count()===0)
             center_name: 'Better Future',
             mission: 'Prevention of domestic violence through the protection end empowerment of the victim, rehabilitation of family members; challenge systems and institutions so that they respond more effectively to the needs of battered women and their children; promote social change; and educate the community on gender equality and domestic violence and its consequences.',
             history: 'Established in 2010, Better Future is a full-service center led by a small group of feminist activists and community leaders dedicated to the mission of combating domestic abuse through the protection, rehabilitation, and empowerment of survivors and changing the legal, educational, and social conditions that contribute to a culture of silence surrounding DV. We uphold a zero tolerance policy for violence against women and seek to create an environment where women and girls are protected, defended, and nurtured.',
-            location: 'Casa di Accoglienza delle Donne Maltrattate Odv, Via Piacenza 14, Milan',
+            location: 'Casa di Accoglienza delle Donne Maltrattate Odv, Via Piacenza 14, Milan, Italy',
             opening_hours: 'Monday - Friday: 8.30-18, Saturday: 10-18',
             practical_info: 'Operators will be active in the opening hours of the center listed above, in the other hours the online voice mail will be active to take care of your requests.',
         }
@@ -702,7 +726,17 @@ if(await Project.count()===0)
                 'Enhance the academic performance and confidence of the participants.\n' +
                 'Support the overall well-being of the participants, ensuring a balanced and conducive environment for learning.',
             picture: '/_nuxt/assets/img/women/w5.png',
-        }
+        },
+        {
+            project_name: 'EmpowerHER',
+            personName: 'Emma Rock',
+            short_description: 'The project addresses key areas such as education, economic empowerment, health and well-being, leadership, and social inclusion.',
+            description: '"EmpowerHER: Elevating Women to New Heights" is a comprehensive project aimed at fostering women empowerment across various spheres of life. This initiative seeks to create an environment where women can achieve their fullest potential, enjoy equal opportunities, and contribute meaningfully to society. The project is grounded in the understanding that true empowerment involves more than just the removal of barriers. It requires the active creation of environments and opportunities where women can thrive, innovate, and lead. This initiative, therefore, focuses on comprehensive and multi-faceted approaches to empowerment, addressing educational, economic, health, leadership, and social dimensions.',
+            goals: 'Increase access to quality education for girls and women.\n' +
+                'Promote STEM (Science, Technology, Engineering, and Mathematics) education among girls.\n' +
+                'Enhance womens entrepreneurial skills and opportunities.',
+            picture: '/_nuxt/assets/img/women/w11.webp',
+        },
     ])
            
 
@@ -749,6 +783,15 @@ if(await Details.count()===0)
             target_people: 'Women 14-22',
             location: 'Milan',
             duration: '01/06/2024 to 01/06/2028',
+            partners: 'Politecnico di Milano, a  prestigious technical university in Italy, is a key partner in the Girls&Growth project. The university provides academic support and resources to enhance the educational experience of the participating girls.' +
+                'Politecnico di Milano offers access to its network of educators and tutors who provide personalized lessons and academic assistance, ensuring the girls receive the guidance they need to excel in their studies.' +
+                'Additionally, the university supports the project by facilitating workshops and educational programs that promote academic excellence and personal development.'
+        },
+        {
+            project_name: 'EmpowerHER',
+            target_people: 'Women 18+',
+            location: 'South Italy',
+            duration: '01/09/2024 to 01/06/2030',
             partners: 'Politecnico di Milano, a  prestigious technical university in Italy, is a key partner in the Girls&Growth project. The university provides academic support and resources to enhance the educational experience of the participating girls.' +
                 'Politecnico di Milano offers access to its network of educators and tutors who provide personalized lessons and academic assistance, ensuring the girls receive the guidance they need to excel in their studies.' +
                 'Additionally, the university supports the project by facilitating workshops and educational programs that promote academic excellence and personal development.'
