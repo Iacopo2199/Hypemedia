@@ -19,7 +19,22 @@ useHead({
 
 <b><h2 class="w3-container w3-center w3-padding-32">This is the home page </h2></b>
 
+  <div id="app">
+    <Chatbot />
+  </div>
+
 </template>
+
+<script>
+import Chatbot from '../components/Chatbot.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Chatbot
+  }
+};
+</script>
 
 <style scoped>
 
