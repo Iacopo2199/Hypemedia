@@ -20,8 +20,6 @@
 </template>
 
 <script>
-import { sendMessageToOpenAI } from '../openai.js'; // Adjust the path based on your directory structure
-
 export default {
   data() {
     return {
@@ -47,32 +45,31 @@ export default {
       this.userInput = '';
 
       try {
-        const botResponse = await sendMessageToOpenAI(userMessage.text);
+        // Send message to the server-side API
+        const response = await fetch('/api/openai', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ message: userMessage.text })
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to get response from server');
+        }
+
+        const data = await response.json();
         this.messages.push({
-          text: botResponse,
+          text: data.message,
           sender: 'bot'
         });
       } catch (error) {
         console.error('Error sending message to OpenAI:', error);
-        let errorMessage = 'Sorry, there was an error processing your request.';
-
-        if (error.response) {
-          // Handle specific HTTP error responses
-          if (error.response.status === 401) {
-            errorMessage = 'Unauthorized request. Check your API key.';
-          } else if (error.response.status === 429) {
-            errorMessage = 'Rate limit exceeded. Please try again later.';
-          } else {
-            errorMessage = `Error: ${error.response.data.message}`;
-          }
-        }
-
         this.messages.push({
-          text: errorMessage,
+          text: 'Sorry, there was an error processing your request.',
           sender: 'bot'
         });
       }
-
     }
   }
 };

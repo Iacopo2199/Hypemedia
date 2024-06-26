@@ -217,26 +217,6 @@ const Cv = db.define('cv',{
     tableName: 'cv'
 })
 
-const Api = db.define('api',{
-    key: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        primaryKey: true
-    },
-},{
-    createdAt: false,
-    updatedAt: false,
-    tableName: 'api'
-})
-
-await Api.sync()
-if(await Api.count()===0)
-    await Api.bulkCreate([
-        {
-            key: 'sk-proj-vV5Z90Uy1XryfmXgCwwnT3BlbkFJwT7Wh2ilRTU583nhSU2e',
-        }
-    ])
-
 
 await People.sync()
 if(await People.count()===0)
@@ -846,8 +826,4 @@ export function useServiceDb(){
 
 export function usePractical_infoDb(){
     return Practical_info
-}
-
-export function useKeyDb(){
-    return Api
 }
