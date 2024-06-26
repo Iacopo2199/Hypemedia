@@ -17,6 +17,7 @@ useHead({
   <div id="app">
     <Tabs />
   </div>
+  <br>
 </template>
 
 <script>
